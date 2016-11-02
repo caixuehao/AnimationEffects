@@ -14,8 +14,8 @@
     if (self = [super init]) {
         _danmakuLabelStatus = DanmakuLabelStatusRuning;
         _danmkuLabelStyle = DanmkuLabelStyleScrolled;
-        _text = @"test";
-        _fontSize = 14;
+        _text = @"~~~~~";
+        _font = [UIFont systemFontOfSize:15];
         _color = ColorWhite(255);
     }
     return self;

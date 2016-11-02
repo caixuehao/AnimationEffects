@@ -28,8 +28,10 @@ typedef NS_ENUM(NSInteger, DanmkuLabelStyle) {
 
 @property(nonatomic,strong)NSString* text;
 
-@property(nonatomic)float fontSize;
+@property(nonatomic)UIFont* font;
 
 @property(nonatomic,strong)UIColor* color;
+
+@property(nonatomic)float positionY;
 
 @end

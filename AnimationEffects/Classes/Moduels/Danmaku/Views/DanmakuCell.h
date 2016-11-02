@@ -9,9 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "DanmakuEntity.h"
 
+@protocol DanmakuCellDisappearDelegate;
 
-@interface DanmakuCell : UILabel
+@interface DanmakuCell : CATextLayer
 
 @property(nonatomic,strong)DanmakuEntity* entity;
 
+@property(nonatomic,readonly)CGSize cellSize;
+
+@property(nonatomic,strong)CABasicAnimation *animation;
+
+@property(nonatomic,weak)id<DanmakuCellDisappearDelegate>disappearDelegate;
+
+@end
+//数据刷新时调用
+@protocol DanmakuCellDisappearDelegate
+@optional//不一定要实现
+-(void)danmakuCellDisappear:(DanmakuCell*)cell;
 @end

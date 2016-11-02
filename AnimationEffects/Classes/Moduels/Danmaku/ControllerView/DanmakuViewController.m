@@ -9,20 +9,33 @@
 #import "DanmakuViewController.h"
 
 #import <Masonry.h>
+#import "Macro.h"
 
 #import "DanmakuCell.h"
 #import "DanmakuEntity.h"
-@interface DanmakuViewController ()
+@interface DanmakuViewController ()<DanmakuCellDisappearDelegate>
 
 @end
 
 @implementation DanmakuViewController{
     NSMutableArray<DanmakuCell *>* danmakuCellArr;
+    
+    NSMutableArray<DanmakuCell *>* discardedDanmakuCellArr;
+    
+    float scrolledDanmakuPositionY;
+    float topDanmakuPositionY;
+    float bottomDanmakuPositionY;
+    
     UIImageView* backgroundImage;
 }
 -(instancetype)init{
     if (self = [super init]) {
         danmakuCellArr = [[NSMutableArray alloc] init];
+        discardedDanmakuCellArr = [[NSMutableArray alloc] init];
+        
+        scrolledDanmakuPositionY = 0;
+        topDanmakuPositionY = 0;
+        bottomDanmakuPositionY = SSize.height;
     }
     return self;
 }
@@ -44,18 +57,11 @@
         make.top.equalTo(self.mas_topLayoutGuide).offset(0);
         make.left.right.bottom.equalTo(self.view);
     }];
+    //定时器
+    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(addDanmaku) userInfo:nil repeats:YES];
+  
     
-    NSTimeInterval period = 0.1f; //设置时间间隔
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    dispatch_source_set_timer(_timer, dispatch_walltime(NULL, 0), period * NSEC_PER_SEC, 0); //每秒执行
-    dispatch_source_set_event_handler(_timer, ^{
-        //在这里执行事件
-        DanmakuEntity* entity = [[DanmakuEntity alloc] init];
-        DanmakuCell* cell = [[DanmakuCell alloc] init];
-        [self.view addSubview:cell];
-    });
-    dispatch_resume(_timer);
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +80,72 @@
     return UIInterfaceOrientationMaskLandscape;
 }
 
+
+-(void)addDanmaku{
+    //发现回收再设置还废cpu一些。
+    DanmakuCell* cell;
+//    if (discardedDanmakuCellArr.count) {
+//        cell = [discardedDanmakuCellArr lastObject];
+//        [discardedDanmakuCellArr removeLastObject];
+//        [danmakuCellArr addObject:cell];
+//    }else{
+        cell = [[DanmakuCell alloc] init];
+        [danmakuCellArr addObject:cell];
+//    }
+
+    
+    
+    
+    cell.disappearDelegate = self;
+//    [self.view addSubview:cell];
+    [self.view.layer addSublayer:cell];
+    
+    DanmakuEntity* entity = [[DanmakuEntity alloc] init];
+    entity.font = [UIFont systemFontOfSize:arc4random()%15+10];
+    entity.color = ColorRGB(arc4random()%255, arc4random()%255, arc4random()%255);
+//    entity.danmkuLabelStyle = arc4random()%3;
+    
+    switch (entity.danmkuLabelStyle) {
+        case DanmkuLabelStyleTop:
+            entity.positionY = topDanmakuPositionY;
+            break;
+        case DanmkuLabelStyleScrolled:
+            entity.positionY = scrolledDanmakuPositionY;
+            break;
+        case DanmkuLabelStyleBottom:
+            entity.positionY =  bottomDanmakuPositionY;
+            break;
+        default:
+            break;
+    }
+    
+    cell.entity = entity;
+
+    switch (entity.danmkuLabelStyle) {
+        case DanmkuLabelStyleTop:
+            topDanmakuPositionY += cell.cellSize.height;
+            topDanmakuPositionY = topDanmakuPositionY<SSize.height-100?topDanmakuPositionY:0;
+            break;
+        case DanmkuLabelStyleScrolled:
+            scrolledDanmakuPositionY += cell.cellSize.height;
+            scrolledDanmakuPositionY = scrolledDanmakuPositionY<SSize.height-0?scrolledDanmakuPositionY:0;
+            break;
+        case DanmkuLabelStyleBottom:
+            bottomDanmakuPositionY -= cell.cellSize.height;
+            bottomDanmakuPositionY = bottomDanmakuPositionY>100?bottomDanmakuPositionY:SSize.height;
+            break;
+        default:
+            break;
+    }
+//    NSLog(@"%ld",danmakuCellArr.count);
+   
+}
+
+#pragma mark - DanmakuCellDisappearDelegate
+-(void)danmakuCellDisappear:(DanmakuCell *)cell{
+    [danmakuCellArr removeObject:cell];
+//    [discardedDanmakuCellArr addObject:cell];
+}
 /*
 #pragma mark - Navigation
 

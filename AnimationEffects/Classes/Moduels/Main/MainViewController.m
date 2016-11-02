@@ -11,6 +11,7 @@
 #import <Masonry.h>
 
 #import "DanmakuViewController.h"
+#import "StarrySkyViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titlesArr = @[@"test1",@"test2",@"test3",@"test4"];
+    _titlesArr = @[@"弹幕",@"星空",@"test3",@"test4"];
     
     
     _mainTableView = ({
@@ -69,7 +70,9 @@
         case 0:
             [self.navigationController pushViewController:[[DanmakuViewController alloc] init] animated:YES];
             break;
-            
+        case 1:
+            [self.navigationController pushViewController:[[StarrySkyViewController alloc] init] animated:YES];
+            break;
         default:
             [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
             break;

@@ -22,6 +22,8 @@
 		FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */; };
 		FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890D1DC9D28F00E4F138 /* background1.jpg */; };
 		FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890E1DC9D28F00E4F138 /* background2.jpg */; };
+		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
+		FCC7FDAE1DCA468900D51CDE /* StarrySkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,10 @@
 		FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		FC43890D1DC9D28F00E4F138 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		FC43890E1DC9D28F00E4F138 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		FCC7FDAC1DCA468900D51CDE /* StarrySkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarrySkyViewController.h; path = StarrySky/ControllerView/StarrySkyViewController.h; sourceTree = "<group>"; };
+		FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarrySkyViewController.m; path = StarrySky/ControllerView/StarrySkyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +201,7 @@
 		FC37FDF91DC89259001F3575 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FCC7FDA61DCA287F00D51CDE /* View */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 		FC37FDFC1DC89259001F3575 /* Moduels */ = {
 			isa = PBXGroup;
 			children = (
+				FCC7FDAA1DCA463E00D51CDE /* StarrySky */,
 				FC37FE091DC98753001F3575 /* Danmaku */,
 				FC37FDFD1DC89259001F3575 /* Main */,
 			);
@@ -279,6 +287,32 @@
 				FC4389071DC9CB3800E4F138 /* DanmakuEntity.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		FCC7FDA61DCA287F00D51CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */,
+				FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCC7FDAA1DCA463E00D51CDE /* StarrySky */ = {
+			isa = PBXGroup;
+			children = (
+				FCC7FDAB1DCA464A00D51CDE /* ControllerView */,
+			);
+			name = StarrySky;
+			sourceTree = "<group>";
+		};
+		FCC7FDAB1DCA464A00D51CDE /* ControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				FCC7FDAC1DCA468900D51CDE /* StarrySkyViewController.h */,
+				FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */,
+			);
+			name = ControllerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,9 +498,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
 				FC37FDCA1DC88FC3001F3575 /* AppDelegate.m in Sources */,
 				FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */,
 				FC4388FB1DC9B72500E4F138 /* DanmakuViewController.m in Sources */,
+				FCC7FDAE1DCA468900D51CDE /* StarrySkyViewController.m in Sources */,
 				FC37FDC71DC88FC3001F3575 /* main.m in Sources */,
 				FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */,
 				FC4389081DC9CB3800E4F138 /* DanmakuEntity.m in Sources */,
