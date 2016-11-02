@@ -1,0 +1,17 @@
+//
+//  DanmakuCell.h
+//  AnimationEffects
+//
+//  Created by cxh on 16/11/2.
+//  Copyright © 2016年 cxh. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "DanmakuEntity.h"
+
+
+@interface DanmakuCell : UILabel
+
+@property(nonatomic,strong)DanmakuEntity* entity;
+
+@end

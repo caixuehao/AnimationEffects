@@ -16,7 +16,12 @@
 		FC37FDE01DC88FC3001F3575 /* AnimationEffectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37FDDF1DC88FC3001F3575 /* AnimationEffectsTests.m */; };
 		FC37FDEB1DC88FC3001F3575 /* AnimationEffectsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37FDEA1DC88FC3001F3575 /* AnimationEffectsUITests.m */; };
 		FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37FE021DC8933B001F3575 /* MainViewController.m */; };
-		FC37FE081DC8A07E001F3575 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC37FE071DC8A07E001F3575 /* background.jpg */; };
+		FC4388FB1DC9B72500E4F138 /* DanmakuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4388FA1DC9B72500E4F138 /* DanmakuViewController.m */; };
+		FC4388FF1DC9B76400E4F138 /* DanmakuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4388FE1DC9B76400E4F138 /* DanmakuCell.m */; };
+		FC4389081DC9CB3800E4F138 /* DanmakuEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4389071DC9CB3800E4F138 /* DanmakuEntity.m */; };
+		FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */; };
+		FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890D1DC9D28F00E4F138 /* background1.jpg */; };
+		FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890E1DC9D28F00E4F138 /* background2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +61,17 @@
 		FC37FDEC1DC88FC3001F3575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC37FE011DC8933B001F3575 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		FC37FE021DC8933B001F3575 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		FC37FE071DC8A07E001F3575 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		FC4388F91DC9B72500E4F138 /* DanmakuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DanmakuViewController.h; path = Danmaku/ControllerView/DanmakuViewController.h; sourceTree = "<group>"; };
+		FC4388FA1DC9B72500E4F138 /* DanmakuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DanmakuViewController.m; path = Danmaku/ControllerView/DanmakuViewController.m; sourceTree = "<group>"; };
+		FC4388FD1DC9B76400E4F138 /* DanmakuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DanmakuCell.h; path = Danmaku/Views/DanmakuCell.h; sourceTree = "<group>"; };
+		FC4388FE1DC9B76400E4F138 /* DanmakuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DanmakuCell.m; path = Danmaku/Views/DanmakuCell.m; sourceTree = "<group>"; };
+		FC4389061DC9CB3800E4F138 /* DanmakuEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DanmakuEntity.h; path = Entity/DanmakuEntity.h; sourceTree = "<group>"; };
+		FC4389071DC9CB3800E4F138 /* DanmakuEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DanmakuEntity.m; path = Entity/DanmakuEntity.m; sourceTree = "<group>"; };
+		FC4389091DC9CE0C00E4F138 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		FC43890A1DC9D1E200E4F138 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		FC43890D1DC9D28F00E4F138 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		FC43890E1DC9D28F00E4F138 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +142,7 @@
 		FC37FDC41DC88FC3001F3575 /* AnimationEffects */ = {
 			isa = PBXGroup;
 			children = (
+				FC37FE061DC8A07E001F3575 /* Resources */,
 				FC37FDF81DC89259001F3575 /* Classes */,
 				FC37FDC81DC88FC3001F3575 /* AppDelegate.h */,
 				FC37FDC91DC88FC3001F3575 /* AppDelegate.m */,
@@ -168,7 +184,6 @@
 		FC37FDF81DC89259001F3575 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FC37FE061DC8A07E001F3575 /* Resources */,
 				FC37FDF91DC89259001F3575 /* Category */,
 				FC37FDFA1DC89259001F3575 /* Common */,
 				FC37FDFB1DC89259001F3575 /* Macro */,
@@ -194,6 +209,7 @@
 		FC37FDFB1DC89259001F3575 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
+				FC4389091DC9CE0C00E4F138 /* Macro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -201,6 +217,7 @@
 		FC37FDFC1DC89259001F3575 /* Moduels */ = {
 			isa = PBXGroup;
 			children = (
+				FC37FE091DC98753001F3575 /* Danmaku */,
 				FC37FDFD1DC89259001F3575 /* Main */,
 			);
 			path = Moduels;
@@ -211,6 +228,8 @@
 			children = (
 				FC37FE011DC8933B001F3575 /* MainViewController.h */,
 				FC37FE021DC8933B001F3575 /* MainViewController.m */,
+				FC43890A1DC9D1E200E4F138 /* MainNavigationController.h */,
+				FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -218,11 +237,49 @@
 		FC37FE061DC8A07E001F3575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC37FE071DC8A07E001F3575 /* background.jpg */,
+				FC43890D1DC9D28F00E4F138 /* background1.jpg */,
+				FC43890E1DC9D28F00E4F138 /* background2.jpg */,
 			);
 			name = Resources;
 			path = AnimationEffects/Resources;
 			sourceTree = SOURCE_ROOT;
+		};
+		FC37FE091DC98753001F3575 /* Danmaku */ = {
+			isa = PBXGroup;
+			children = (
+				FC4389051DC9C98F00E4F138 /* Entity */,
+				FC4388FC1DC9B73300E4F138 /* Views */,
+				FC4388F81DC9B6E800E4F138 /* ControllerView */,
+			);
+			name = Danmaku;
+			sourceTree = "<group>";
+		};
+		FC4388F81DC9B6E800E4F138 /* ControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				FC4388F91DC9B72500E4F138 /* DanmakuViewController.h */,
+				FC4388FA1DC9B72500E4F138 /* DanmakuViewController.m */,
+			);
+			name = ControllerView;
+			sourceTree = "<group>";
+		};
+		FC4388FC1DC9B73300E4F138 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC4388FD1DC9B76400E4F138 /* DanmakuCell.h */,
+				FC4388FE1DC9B76400E4F138 /* DanmakuCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FC4389051DC9C98F00E4F138 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FC4389061DC9CB3800E4F138 /* DanmakuEntity.h */,
+				FC4389071DC9CB3800E4F138 /* DanmakuEntity.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -331,9 +388,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC37FDD51DC88FC3001F3575 /* LaunchScreen.storyboard in Resources */,
-				FC37FE081DC8A07E001F3575 /* background.jpg in Resources */,
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
+				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
 				FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */,
+				FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +466,11 @@
 			files = (
 				FC37FDCA1DC88FC3001F3575 /* AppDelegate.m in Sources */,
 				FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */,
+				FC4388FB1DC9B72500E4F138 /* DanmakuViewController.m in Sources */,
 				FC37FDC71DC88FC3001F3575 /* main.m in Sources */,
+				FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */,
+				FC4389081DC9CB3800E4F138 /* DanmakuEntity.m in Sources */,
+				FC4388FF1DC9B76400E4F138 /* DanmakuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

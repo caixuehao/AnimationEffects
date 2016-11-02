@@ -7,26 +7,28 @@
 //
 
 #import "MainViewController.h"
+
 #import <Masonry.h>
+
+#import "DanmakuViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView* mainTableView;
 
-@property(nonatomic,strong)NSArray<NSDictionary*>* viewControllerArr;
+@property(nonatomic,strong)NSArray<NSString*>* titlesArr;
 @end
 
 @implementation MainViewController{
     UIImageView* backgroundImage;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+  [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _viewControllerArr = @[@{@"vc":[[UIViewController alloc] init],@"title":@"test1"},
-                           @{@"vc":[[UIViewController alloc] init],@"title":@"test2"},
-                           @{@"vc":[[UIViewController alloc] init],@"title":@"test3"},
-                           @{@"vc":[[UIViewController alloc] init],@"title":@"test4"}];
+    _titlesArr = @[@"test1",@"test2",@"test3",@"test4"];
     
     
     _mainTableView = ({
@@ -39,7 +41,7 @@
     });
     
     backgroundImage = ({
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background1.jpg"]];
         [self.view addSubview:imageView];
         [self.view sendSubviewToBack:imageView];
         imageView;
@@ -47,12 +49,12 @@
     
     
     [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(64);
+        make.top.equalTo(self.mas_topLayoutGuide).offset(0);
         make.left.right.bottom.equalTo(self.view);
     }];
     
     [backgroundImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(64);
+        make.top.equalTo(self.mas_topLayoutGuide).offset(0);
         make.left.right.bottom.equalTo(self.view);
     }];
 }
@@ -63,7 +65,16 @@
 }
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.navigationController pushViewController:_viewControllerArr[indexPath.row][@"vc"] animated:YES];
+    switch (indexPath.row) {
+        case 0:
+            [self.navigationController pushViewController:[[DanmakuViewController alloc] init] animated:YES];
+            break;
+            
+        default:
+            [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
+            break;
+    }
+    
 }
 #pragma mark -  UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -71,7 +82,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _viewControllerArr.count;
+    return _titlesArr.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -80,7 +91,7 @@
         cell = [[UITableViewCell alloc] init];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.textLabel.text = _viewControllerArr[indexPath.row][@"title"];
+    cell.textLabel.text = _titlesArr[indexPath.row];
     return cell;
 }
 /*
