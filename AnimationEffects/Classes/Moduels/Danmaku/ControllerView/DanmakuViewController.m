@@ -18,9 +18,13 @@
 @end
 
 @implementation DanmakuViewController{
+    //发现两个效率一样
     NSMutableArray<DanmakuCell *>* danmakuCellArr;
-    
     NSMutableArray<DanmakuCell *>* discardedDanmakuCellArr;
+    
+    DanmakuCell *firstDanmakuCell;
+    DanmakuCell *firstDiscardedDanmakuCell;
+
     
     float scrolledDanmakuPositionY;
     float topDanmakuPositionY;
@@ -82,23 +86,36 @@
 
 
 -(void)addDanmaku{
-    //发现回收再设置还废cpu一些。
+    NSLog(@"%lu",danmakuCellArr.count);
+
     DanmakuCell* cell;
-//    if (discardedDanmakuCellArr.count) {
-//        cell = [discardedDanmakuCellArr lastObject];
-//        [discardedDanmakuCellArr removeLastObject];
-//        [danmakuCellArr addObject:cell];
-//    }else{
+    //数组
+    if (discardedDanmakuCellArr.count) {
+        cell = [discardedDanmakuCellArr lastObject];
+        [discardedDanmakuCellArr removeLastObject];
+        [danmakuCellArr addObject:cell];
+    }else{
         cell = [[DanmakuCell alloc] init];
         [danmakuCellArr addObject:cell];
+    }
+    //链表
+//    if(firstDiscardedDanmakuCell){
+//        cell = firstDiscardedDanmakuCell;
+//        firstDiscardedDanmakuCell = firstDiscardedDanmakuCell.nextCell;
+//        
+//        firstDanmakuCell.previousCell = cell;
+//        firstDanmakuCell = cell.nextCell;
+//    }else{
+//        cell = [[DanmakuCell alloc] init];
+//        cell.nextCell = firstDanmakuCell;
+//        firstDanmakuCell = cell.nextCell;
 //    }
-
     
     
     
     cell.disappearDelegate = self;
-//    [self.view addSubview:cell];
-    [self.view.layer addSublayer:cell];
+    [self.view addSubview:cell];
+//    [self.view.layer addSublayer:cell];
     
     DanmakuEntity* entity = [[DanmakuEntity alloc] init];
     entity.font = [UIFont systemFontOfSize:arc4random()%15+10];
@@ -137,14 +154,20 @@
         default:
             break;
     }
-//    NSLog(@"%ld",danmakuCellArr.count);
+    NSLog(@"%ld",danmakuCellArr.count);
    
 }
 
 #pragma mark - DanmakuCellDisappearDelegate
 -(void)danmakuCellDisappear:(DanmakuCell *)cell{
+     //链表
+//    cell.previousCell.nextCell = cell.nextCell;
+//    cell.nextCell = firstDiscardedDanmakuCell;
+//    firstDiscardedDanmakuCell = cell;
+
+    //数组
     [danmakuCellArr removeObject:cell];
-//    [discardedDanmakuCellArr addObject:cell];
+    [discardedDanmakuCellArr addObject:cell];
 }
 /*
 #pragma mark - Navigation

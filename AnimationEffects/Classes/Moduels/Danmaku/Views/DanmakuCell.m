@@ -23,11 +23,15 @@
 
 -(void)setEntity:(DanmakuEntity *)entity{
 
-    self.font = (__bridge CFTypeRef _Nullable)(entity.font);
-    self.fontSize = entity.font.pointSize;
-    self.string = entity.text;
-    self.foregroundColor = entity.color.CGColor;
-    self.contentsScale = 1;
+//    self.font = (__bridge CFTypeRef _Nullable)(entity.font);
+//    self.fontSize = entity.font.pointSize;
+//    self.string = entity.text;
+//    self.foregroundColor = entity.color.CGColor;
+//    self.contentsScale = 1;
+
+    self.font = entity.font;
+    self.textColor = entity.color;
+    self.text = entity.text;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
@@ -53,22 +57,20 @@
             self.frame = CGRectMake(SSize.width-0, entity.positionY, _cellSize.width+20, _cellSize.height+5);
             _animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
             _animation.duration = 5.0f;
-            _animation.fromValue = @(self.position.x);
+            _animation.fromValue = @(self.layer.position.x);
             _animation.byValue = @(-(self.cellSize.width+SSize.width+20));
             break;
         default:
             break;
     }
     _animation.delegate = self;
-    [self addAnimation:_animation forKey:@"animation"];
+    [self.layer addAnimation:_animation forKey:@"animation"];
     
 }
 
 //动画结束时
 - (void)animationDidStop:(CAAnimation *)animtion finished:(BOOL)flag
 {
-    [self removeFromSuperlayer];
-    
     [_disappearDelegate danmakuCellDisappear:self];
 }
 

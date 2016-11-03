@@ -11,7 +11,7 @@
 
 @protocol DanmakuCellDisappearDelegate;
 
-@interface DanmakuCell : CATextLayer
+@interface DanmakuCell : UILabel//CATextLayer
 
 @property(nonatomic,strong)DanmakuEntity* entity;
 
@@ -20,6 +20,10 @@
 @property(nonatomic,strong)CABasicAnimation *animation;
 
 @property(nonatomic,weak)id<DanmakuCellDisappearDelegate>disappearDelegate;
+
+@property(nonatomic,weak)DanmakuCell* previousCell;
+
+@property(nonatomic,weak)DanmakuCell* nextCell;
 
 @end
 //数据刷新时调用
