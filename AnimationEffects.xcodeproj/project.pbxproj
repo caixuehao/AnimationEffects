@@ -22,6 +22,7 @@
 		FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */; };
 		FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890D1DC9D28F00E4F138 /* background1.jpg */; };
 		FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890E1DC9D28F00E4F138 /* background2.jpg */; };
+		FC4B43191DCB813E0023FD73 /* starry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4B43181DCB813E0023FD73 /* starry.png */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
 		FCC7FDAE1DCA468900D51CDE /* StarrySkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		FC43890B1DC9D1E200E4F138 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		FC43890D1DC9D28F00E4F138 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		FC43890E1DC9D28F00E4F138 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		FC4B43181DCB813E0023FD73 /* starry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starry.png; sourceTree = "<group>"; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		FCC7FDAC1DCA468900D51CDE /* StarrySkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarrySkyViewController.h; path = StarrySky/ControllerView/StarrySkyViewController.h; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		FC37FE061DC8A07E001F3575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC4B43181DCB813E0023FD73 /* starry.png */,
 				FC43890D1DC9D28F00E4F138 /* background1.jpg */,
 				FC43890E1DC9D28F00E4F138 /* background2.jpg */,
 			);
@@ -423,6 +426,7 @@
 			files = (
 				FC37FDD51DC88FC3001F3575 /* LaunchScreen.storyboard in Resources */,
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
+				FC4B43191DCB813E0023FD73 /* starry.png in Resources */,
 				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
 				FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */,
 				FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */,

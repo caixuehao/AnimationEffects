@@ -23,6 +23,8 @@
     MainViewController* mainViewController = [[MainViewController alloc] init];
     self.window.rootViewController = [[MainNavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
+    
+    
     //UmWJ4UC22ENujir1MA2opA
      char str1[] = "1272134953352671";
      char str2[] = "3go8&$8*3*3h0k(2)2";
