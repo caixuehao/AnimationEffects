@@ -10,14 +10,29 @@
 
 #import <Masonry.h>
 #import "Macro.h"
+#import "StarryView.h"
+
+
+@interface StarrySkyViewController()<StarryViewDisappearDelegate>
+
+@end
 
 @implementation StarrySkyViewController{
     UIImageView* backgroundImage;
     CAEmitterLayer *starryEmitterLayer;
+    NSTimer* timer;
     
+    
+    NSMutableArray<StarryView *>* starryViewArr;
+    NSMutableArray<StarryView *>* discardedStarryViewArr;
+}
+-(void)dealloc{
+    NSLog(@"%s",__FUNCTION__);
 }
 -(instancetype)init{
     if (self = [super init]) {
+        starryViewArr = [[NSMutableArray alloc] init];
+        discardedStarryViewArr = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -25,8 +40,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor grayColor];
-    //强制横屏
-//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeLeft] forKey:@"orientation"];
     
     backgroundImage = ({
         UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background1.jpg"]];
@@ -40,14 +53,29 @@
         make.left.right.bottom.equalTo(self.view);
     }];
 
-    [self loadEmitterLayer];
+//    [self loadEmitterLayer];//用粒子效果实现的，无法实现闪缩效果（应该是我不会玩），，，
+    
+    //定时器
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(addStarryViews) userInfo:nil repeats:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    for (StarryView* view in starryViewArr) {
+        [view removeFromSuperview];
+    }
+    for (StarryView* view in discardedStarryViewArr) {
+        [view removeFromSuperview];
+    }
+    [starryViewArr removeAllObjects];
+    [discardedStarryViewArr removeAllObjects];
+    [timer invalidate];
+}
 //屏幕方向
 //- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
 //    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
@@ -114,5 +142,36 @@
         emitter;
     });
     
+}
+
+
+-(void)addStarryViews{
+    int hight = SSize.height;
+    int width = SSize.width;
+    int length = arc4random()%4+4;
+    
+    StarryView* starryView;
+    if (discardedStarryViewArr.count) {
+        starryView = [discardedStarryViewArr lastObject];
+        [discardedStarryViewArr removeLastObject];
+    }else{
+        starryView = [[StarryView alloc] init];
+         starryView.disappearDelegate = self;
+        [self.view addSubview:starryView];
+    }
+
+    StarryEntity* entity = [[StarryEntity alloc] init];
+    entity.frame = CGRectMake(0+arc4random()%width, SSize.height/3.0+arc4random()%hight/3, length,length);
+    starryView.entity = entity;
+    
+    
+    [starryViewArr addObject:starryView];
+//    NSLog(@"%lu",starryViewArr.count);
+}
+
+#pragma mark - StarryViewDisappearDelegate
+-(void)starryViewDisappear:(StarryView *)starryView{
+    [starryViewArr removeObject:starryView];
+    [discardedStarryViewArr addObject:starryView];
 }
 @end

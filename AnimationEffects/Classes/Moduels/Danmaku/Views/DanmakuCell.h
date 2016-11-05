@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DanmakuEntity.h"
-
+//http://www.jianshu.com/p/02c341
 @protocol DanmakuCellDisappearDelegate;
 
 @interface DanmakuCell : UILabel//CATextLayer
@@ -17,7 +17,7 @@
 
 @property(nonatomic,readonly)CGSize cellSize;
 
-@property(nonatomic,strong)CABasicAnimation *animation;
+//@property(nonatomic,strong)CABasicAnimation *animation;
 
 @property(nonatomic,weak)id<DanmakuCellDisappearDelegate>disappearDelegate;
 
@@ -26,7 +26,7 @@
 @property(nonatomic,weak)DanmakuCell* nextCell;
 
 @end
-//数据刷新时调用
+
 @protocol DanmakuCellDisappearDelegate
 @optional//不一定要实现
 -(void)danmakuCellDisappear:(DanmakuCell*)cell;

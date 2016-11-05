@@ -23,7 +23,7 @@
     MainViewController* mainViewController = [[MainViewController alloc] init];
     self.window.rootViewController = [[MainNavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
-    
+     return YES;
     
     //UmWJ4UC22ENujir1MA2opA
      char str1[] = "1272134953352671";
@@ -48,7 +48,7 @@
     base64Encoded = [base64Encoded stringByReplacingOccurrencesOfString:@"_" withString:@"-"];
     
     NSLog(@"%@",base64Encoded);
-    return YES;
+   
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

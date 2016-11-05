@@ -31,6 +31,11 @@
     float bottomDanmakuPositionY;
     
     UIImageView* backgroundImage;
+    
+    NSTimer* timer;
+}
+-(void)dealloc{
+    NSLog(@"%s",__FUNCTION__);
 }
 -(instancetype)init{
     if (self = [super init]) {
@@ -62,7 +67,7 @@
         make.left.right.bottom.equalTo(self.view);
     }];
     //定时器
-    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(addDanmaku) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(addDanmaku) userInfo:nil repeats:YES];
   
     
 
@@ -72,7 +77,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [timer invalidate];
+    for(DanmakuCell* cell in discardedDanmakuCellArr){
+        [cell removeFromSuperview];
+    }
+    for(DanmakuCell* cell in danmakuCellArr){
+        [cell removeFromSuperview];
+    }
+    [discardedDanmakuCellArr removeAllObjects];
+    [danmakuCellArr removeAllObjects];
+}
 
 //屏幕方向
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
@@ -84,9 +101,8 @@
     return UIInterfaceOrientationMaskLandscape;
 }
 
-
 -(void)addDanmaku{
-    NSLog(@"%lu",danmakuCellArr.count);
+  //  NSLog(@"%lu",danmakuCellArr.count);
 
     DanmakuCell* cell;
     //数组
@@ -97,6 +113,8 @@
     }else{
         cell = [[DanmakuCell alloc] init];
         [danmakuCellArr addObject:cell];
+        cell.disappearDelegate = self;
+        [self.view addSubview:cell];
     }
     //链表
 //    if(firstDiscardedDanmakuCell){
@@ -109,12 +127,13 @@
 //        cell = [[DanmakuCell alloc] init];
 //        cell.nextCell = firstDanmakuCell;
 //        firstDanmakuCell = cell.nextCell;
+//    cell.disappearDelegate = self;
+//    [self.view addSubview:cell];
 //    }
     
     
     
-    cell.disappearDelegate = self;
-    [self.view addSubview:cell];
+
 //    [self.view.layer addSublayer:cell];
     
     DanmakuEntity* entity = [[DanmakuEntity alloc] init];
@@ -154,8 +173,6 @@
         default:
             break;
     }
-    NSLog(@"%ld",danmakuCellArr.count);
-   
 }
 
 #pragma mark - DanmakuCellDisappearDelegate
@@ -168,6 +185,7 @@
     //数组
     [danmakuCellArr removeObject:cell];
     [discardedDanmakuCellArr addObject:cell];
+ 
 }
 /*
 #pragma mark - Navigation

@@ -20,7 +20,9 @@
     }
     return self;
 }
-
+-(void)dealloc{
+//    NSLog(@"%s",__FUNCTION__);
+}
 -(void)setEntity:(DanmakuEntity *)entity{
 
 //    self.font = (__bridge CFTypeRef _Nullable)(entity.font);
@@ -28,7 +30,7 @@
 //    self.string = entity.text;
 //    self.foregroundColor = entity.color.CGColor;
 //    self.contentsScale = 1;
-
+    _entity = entity;
     self.font = entity.font;
     self.textColor = entity.color;
     self.text = entity.text;
@@ -38,40 +40,45 @@
     NSDictionary *attributes = @{NSFontAttributeName:entity.font, NSParagraphStyleAttributeName:paragraphStyle.copy};
     _cellSize = [entity.text boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
     
+    
+    CABasicAnimation *animation;
     switch (entity.danmkuLabelStyle) {
         case DanmkuLabelStyleTop:
             self.frame = CGRectMake((SSize.width-_cellSize.width)*0.5, entity.positionY, _cellSize.width+20, _cellSize.height+5);
-             _animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-             _animation.duration = 0.5;
-             _animation.beginTime = CACurrentMediaTime()+4;
-             _animation.toValue = 0;
+             animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+             animation.duration = 0.5;
+             animation.beginTime = CACurrentMediaTime()+4;
+             animation.toValue = 0;
             break;
         case DanmkuLabelStyleBottom:
             self.frame = CGRectMake((SSize.width-_cellSize.width)*0.5, entity.positionY, _cellSize.width+20, _cellSize.height+5);
-            _animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-            _animation.duration = 0.5;
-            _animation.beginTime = CACurrentMediaTime()+4;
-             _animation.toValue = 0;
+            animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+            animation.duration = 0.5;
+            animation.beginTime = CACurrentMediaTime()+4;
+            animation.toValue = 0;
             break;
         case DanmkuLabelStyleScrolled:
             self.frame = CGRectMake(SSize.width-0, entity.positionY, _cellSize.width+20, _cellSize.height+5);
-            _animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-            _animation.duration = 5.0f;
-            _animation.fromValue = @(self.layer.position.x);
-            _animation.byValue = @(-(self.cellSize.width+SSize.width+20));
+            animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+            animation.duration = 5.0f;
+            animation.fromValue = @(self.layer.position.x);
+            animation.byValue = @(-(self.cellSize.width+SSize.width+20));
             break;
         default:
             break;
     }
-    _animation.delegate = self;
-    [self.layer addAnimation:_animation forKey:@"animation"];
+    animation.delegate = self;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [self.layer addAnimation:animation forKey:@"animation"];
     
 }
 
 //动画结束时
 - (void)animationDidStop:(CAAnimation *)animtion finished:(BOOL)flag
 {
-    [_disappearDelegate danmakuCellDisappear:self];
+    [self.layer removeAllAnimations];
+    if(_disappearDelegate)[_disappearDelegate danmakuCellDisappear:self];
 }
 
 

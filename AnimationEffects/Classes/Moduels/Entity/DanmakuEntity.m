@@ -10,6 +10,7 @@
 #import "Macro.h"
 
 @implementation DanmakuEntity
+
 -(instancetype)init{
     if (self = [super init]) {
         _danmakuLabelStatus = DanmakuLabelStatusRuning;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		87A89807B39C99F618DF48D2 /* libPods-AnimationEffects.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E971334D130F2E98F1BB26B /* libPods-AnimationEffects.a */; };
+		FC26DDFB1DCDA015004BAF93 /* StarryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26DDFA1DCDA015004BAF93 /* StarryView.m */; };
 		FC37FDC71DC88FC3001F3575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37FDC61DC88FC3001F3575 /* main.m */; };
 		FC37FDCA1DC88FC3001F3575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC37FDC91DC88FC3001F3575 /* AppDelegate.m */; };
 		FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC37FDCE1DC88FC3001F3575 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890D1DC9D28F00E4F138 /* background1.jpg */; };
 		FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890E1DC9D28F00E4F138 /* background2.jpg */; };
 		FC4B43191DCB813E0023FD73 /* starry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4B43181DCB813E0023FD73 /* starry.png */; };
+		FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5D753F1DCE0CF500F23857 /* StarryEntity.m */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
 		FCC7FDAE1DCA468900D51CDE /* StarrySkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		56F3891B8F59BA234C68E88D /* Pods-AnimationEffects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationEffects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationEffects/Pods-AnimationEffects.debug.xcconfig"; sourceTree = "<group>"; };
 		7E971334D130F2E98F1BB26B /* libPods-AnimationEffects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationEffects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAAA07C83E21D79EAD275CA /* Pods-AnimationEffects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationEffects.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationEffects/Pods-AnimationEffects.release.xcconfig"; sourceTree = "<group>"; };
+		FC26DDF91DCDA015004BAF93 /* StarryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarryView.h; path = StarrySky/Views/StarryView.h; sourceTree = "<group>"; };
+		FC26DDFA1DCDA015004BAF93 /* StarryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarryView.m; path = StarrySky/Views/StarryView.m; sourceTree = "<group>"; };
 		FC37FDC21DC88FC3001F3575 /* AnimationEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC37FDC61DC88FC3001F3575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC37FDC81DC88FC3001F3575 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		FC43890D1DC9D28F00E4F138 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		FC43890E1DC9D28F00E4F138 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		FC4B43181DCB813E0023FD73 /* starry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starry.png; sourceTree = "<group>"; };
+		FC5D753E1DCE0CF500F23857 /* StarryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarryEntity.h; path = StarrySky/Entity/StarryEntity.h; sourceTree = "<group>"; };
+		FC5D753F1DCE0CF500F23857 /* StarryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarryEntity.m; path = StarrySky/Entity/StarryEntity.m; sourceTree = "<group>"; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		FCC7FDAC1DCA468900D51CDE /* StarrySkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarrySkyViewController.h; path = StarrySky/ControllerView/StarrySkyViewController.h; sourceTree = "<group>"; };
@@ -123,6 +129,15 @@
 				7E971334D130F2E98F1BB26B /* libPods-AnimationEffects.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC26DDF81DCD9FF0004BAF93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC26DDF91DCDA015004BAF93 /* StarryView.h */,
+				FC26DDFA1DCDA015004BAF93 /* StarryView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		FC37FDB91DC88FC3001F3575 = {
@@ -292,6 +307,15 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		FC5D753D1DCE0CCE00F23857 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FC5D753E1DCE0CF500F23857 /* StarryEntity.h */,
+				FC5D753F1DCE0CF500F23857 /* StarryEntity.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		FCC7FDA61DCA287F00D51CDE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +328,8 @@
 		FCC7FDAA1DCA463E00D51CDE /* StarrySky */ = {
 			isa = PBXGroup;
 			children = (
+				FC5D753D1DCE0CCE00F23857 /* Entity */,
+				FC26DDF81DCD9FF0004BAF93 /* Views */,
 				FCC7FDAB1DCA464A00D51CDE /* ControllerView */,
 			);
 			name = StarrySky;
@@ -503,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
+				FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */,
 				FC37FDCA1DC88FC3001F3575 /* AppDelegate.m in Sources */,
 				FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */,
 				FC4388FB1DC9B72500E4F138 /* DanmakuViewController.m in Sources */,
@@ -511,6 +538,7 @@
 				FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */,
 				FC4389081DC9CB3800E4F138 /* DanmakuEntity.m in Sources */,
 				FC4388FF1DC9B76400E4F138 /* DanmakuCell.m in Sources */,
+				FC26DDFB1DCDA015004BAF93 /* StarryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
