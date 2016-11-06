@@ -11,20 +11,23 @@
 #import <Masonry.h>
 #import "Macro.h"
 #import "StarryView.h"
+#import "MeteorView.h"
 
-
-@interface StarrySkyViewController()<StarryViewDisappearDelegate>
+@interface StarrySkyViewController()<StarryViewDisappearDelegate,MeteorViewDisappearDelegate>
 
 @end
 
 @implementation StarrySkyViewController{
     UIImageView* backgroundImage;
     CAEmitterLayer *starryEmitterLayer;
-    NSTimer* timer;
-    
+    NSTimer* starryTimer;
+    NSTimer* meteorTimer;
     
     NSMutableArray<StarryView *>* starryViewArr;
     NSMutableArray<StarryView *>* discardedStarryViewArr;
+    
+    NSMutableArray<MeteorView *>* meteorViewArr;
+    NSMutableArray<MeteorView *>* discardedMeteorViewArr;
 }
 -(void)dealloc{
     NSLog(@"%s",__FUNCTION__);
@@ -33,6 +36,8 @@
     if (self = [super init]) {
         starryViewArr = [[NSMutableArray alloc] init];
         discardedStarryViewArr = [[NSMutableArray alloc] init];
+        meteorViewArr = [[NSMutableArray alloc] init];
+        discardedMeteorViewArr = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -56,7 +61,8 @@
 //    [self loadEmitterLayer];//用粒子效果实现的，无法实现闪缩效果（应该是我不会玩），，，
     
     //定时器
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(addStarryViews) userInfo:nil repeats:YES];
+    starryTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(addStarryViews) userInfo:nil repeats:YES];
+    meteorTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(addMeteorViews) userInfo:nil repeats:YES];
     
 }
 
@@ -74,17 +80,10 @@
     }
     [starryViewArr removeAllObjects];
     [discardedStarryViewArr removeAllObjects];
-    [timer invalidate];
+    [starryTimer invalidate];
+    [meteorTimer invalidate];
 }
-//屏幕方向
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-//    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
-//}
-//
-//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskLandscape;
-//}
+
 
 //loadCAEmitterLayer
 
@@ -169,9 +168,37 @@
 //    NSLog(@"%lu",starryViewArr.count);
 }
 
+
+-(void)addMeteorViews{
+    int hight = SSize.height;
+    int width = SSize.width;
+    int length = arc4random()%14+20;
+    MeteorView* meteorView;
+    if (discardedMeteorViewArr.count) {
+        meteorView = [discardedMeteorViewArr lastObject];
+        [discardedMeteorViewArr removeLastObject];
+    }else{
+        meteorView = [[MeteorView alloc] init];
+        meteorView.disappearDelegate = self;
+        [self.view addSubview:meteorView];
+    }
+
+    MeteorEntity* entity = [[MeteorEntity alloc] init];
+    entity.frame = CGRectMake(100+arc4random()%width, SSize.height/5.0+arc4random()%hight/4.0, length,length);
+    entity.moveDistance = hight/4+arc4random()%(hight/4);
+    meteorView.entity = entity;
+
+}
+
 #pragma mark - StarryViewDisappearDelegate
 -(void)starryViewDisappear:(StarryView *)starryView{
     [starryViewArr removeObject:starryView];
     [discardedStarryViewArr addObject:starryView];
+}
+#pragma mark - MeteorViewDisappearDelegate
+
+-(void)meteorViewDisappear:(MeteorView *)meteorView{
+    [meteorViewArr removeObject:meteorView];
+    [discardedMeteorViewArr addObject:meteorView];
 }
 @end

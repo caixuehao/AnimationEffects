@@ -24,11 +24,9 @@
 -(void)setEntity:(StarryEntity *)entity{
     self.frame = entity.frame;
     
-    self.transform = CGAffineTransformMakeRotation(arc4random()%3/3.14);
-    
     self.tintColor = entity.color;
     
-    self.transform = CGAffineTransformMakeRotation(arc4random()%3/3.14);
+    self.transform = CGAffineTransformMakeRotation((arc4random()%314)/100.0);
     
     CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     animation.duration = entity.duration;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DanmakuEntity.h"
-//http://www.jianshu.com/p/02c341
+//http://www.jianshu.com/p/02c341c748f9
 @protocol DanmakuCellDisappearDelegate;
 
 @interface DanmakuCell : UILabel//CATextLayer

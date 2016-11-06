@@ -27,6 +27,10 @@
 		FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5D753F1DCE0CF500F23857 /* StarryEntity.m */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
 		FCC7FDAE1DCA468900D51CDE /* StarrySkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */; };
+		FCD315661DCF583300069418 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = FCD315651DCF583300069418 /* meteor.png */; };
+		FCD315681DCF583900069418 /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCD315671DCF583900069418 /* background3.jpg */; };
+		FCD3156B1DCF593F00069418 /* MeteorEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD3156A1DCF593F00069418 /* MeteorEntity.m */; };
+		FCD3156E1DCF596500069418 /* MeteorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD3156D1DCF596500069418 /* MeteorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,12 @@
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		FCC7FDAC1DCA468900D51CDE /* StarrySkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarrySkyViewController.h; path = StarrySky/ControllerView/StarrySkyViewController.h; sourceTree = "<group>"; };
 		FCC7FDAD1DCA468900D51CDE /* StarrySkyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarrySkyViewController.m; path = StarrySky/ControllerView/StarrySkyViewController.m; sourceTree = "<group>"; };
+		FCD315651DCF583300069418 /* meteor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteor.png; sourceTree = "<group>"; };
+		FCD315671DCF583900069418 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
+		FCD315691DCF593F00069418 /* MeteorEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeteorEntity.h; path = StarrySky/Entity/MeteorEntity.h; sourceTree = "<group>"; };
+		FCD3156A1DCF593F00069418 /* MeteorEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeteorEntity.m; path = StarrySky/Entity/MeteorEntity.m; sourceTree = "<group>"; };
+		FCD3156C1DCF596500069418 /* MeteorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeteorView.h; path = StarrySky/Views/MeteorView.h; sourceTree = "<group>"; };
+		FCD3156D1DCF596500069418 /* MeteorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeteorView.m; path = StarrySky/Views/MeteorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,8 @@
 			children = (
 				FC26DDF91DCDA015004BAF93 /* StarryView.h */,
 				FC26DDFA1DCDA015004BAF93 /* StarryView.m */,
+				FCD3156C1DCF596500069418 /* MeteorView.h */,
+				FCD3156D1DCF596500069418 /* MeteorView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -262,9 +274,11 @@
 		FC37FE061DC8A07E001F3575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCD315651DCF583300069418 /* meteor.png */,
 				FC4B43181DCB813E0023FD73 /* starry.png */,
 				FC43890D1DC9D28F00E4F138 /* background1.jpg */,
 				FC43890E1DC9D28F00E4F138 /* background2.jpg */,
+				FCD315671DCF583900069418 /* background3.jpg */,
 			);
 			name = Resources;
 			path = AnimationEffects/Resources;
@@ -312,6 +326,8 @@
 			children = (
 				FC5D753E1DCE0CF500F23857 /* StarryEntity.h */,
 				FC5D753F1DCE0CF500F23857 /* StarryEntity.m */,
+				FCD315691DCF593F00069418 /* MeteorEntity.h */,
+				FCD3156A1DCF593F00069418 /* MeteorEntity.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -451,7 +467,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC37FDD51DC88FC3001F3575 /* LaunchScreen.storyboard in Resources */,
+				FCD315681DCF583900069418 /* background3.jpg in Resources */,
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
+				FCD315661DCF583300069418 /* meteor.png in Resources */,
 				FC4B43191DCB813E0023FD73 /* starry.png in Resources */,
 				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
 				FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */,
@@ -530,6 +548,7 @@
 			files = (
 				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
 				FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */,
+				FCD3156B1DCF593F00069418 /* MeteorEntity.m in Sources */,
 				FC37FDCA1DC88FC3001F3575 /* AppDelegate.m in Sources */,
 				FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */,
 				FC4388FB1DC9B72500E4F138 /* DanmakuViewController.m in Sources */,
@@ -537,6 +556,7 @@
 				FC37FDC71DC88FC3001F3575 /* main.m in Sources */,
 				FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */,
 				FC4389081DC9CB3800E4F138 /* DanmakuEntity.m in Sources */,
+				FCD3156E1DCF596500069418 /* MeteorView.m in Sources */,
 				FC4388FF1DC9B76400E4F138 /* DanmakuCell.m in Sources */,
 				FC26DDFB1DCDA015004BAF93 /* StarryView.m in Sources */,
 			);
@@ -682,10 +702,11 @@
 			baseConfigurationReference = 56F3891B8F59BA234C68E88D /* Pods-AnimationEffects.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnimationEffects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = www.duole.login.AnimationEffects;
+				PRODUCT_BUNDLE_IDENTIFIER = www.duole.login.AnimationEffects.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -695,10 +716,11 @@
 			baseConfigurationReference = 8FAAA07C83E21D79EAD275CA /* Pods-AnimationEffects.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnimationEffects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = www.duole.login.AnimationEffects;
+				PRODUCT_BUNDLE_IDENTIFIER = www.duole.login.AnimationEffects.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
