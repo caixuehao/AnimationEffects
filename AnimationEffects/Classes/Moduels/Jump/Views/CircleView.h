@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 //http://code4app.com/ios/Draw-Circle-With-Animation/521c57616803fabb34000000
 @interface CircleView : UIView
-- (void)drawRoundView:(CGPoint)centerPoint withStartAngle:(CGFloat)startAngle withEndAngle:(CGFloat)endAngle withRadius:(CGFloat)radius;
+
 @end

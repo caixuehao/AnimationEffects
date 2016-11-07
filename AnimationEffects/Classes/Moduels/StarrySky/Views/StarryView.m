@@ -26,7 +26,7 @@
     
     self.tintColor = entity.color;
     
-    self.transform = CGAffineTransformMakeRotation((arc4random()%314)/100.0);
+//    self.transform = CGAffineTransformMakeRotation((arc4random()%314)/100.0);
     
     CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     animation.duration = entity.duration;

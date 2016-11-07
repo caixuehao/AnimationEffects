@@ -67,7 +67,7 @@
         make.left.right.bottom.equalTo(self.view);
     }];
     //定时器
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(addDanmaku) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(addDanmaku) userInfo:nil repeats:YES];
   
     
 
@@ -102,7 +102,7 @@
 }
 
 -(void)addDanmaku{
-  //  NSLog(@"%lu",danmakuCellArr.count);
+    NSLog(@"%lu",danmakuCellArr.count);
 
     DanmakuCell* cell;
     //数组
