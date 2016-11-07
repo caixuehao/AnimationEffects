@@ -90,7 +90,7 @@
         }
         //动画
         [UIView animateWithDuration:1.0 animations:^{
-            subViews[i].origin = CGPointMake(subViews[i].origin.x+self.view.width, subViews[i].origin.y-self.view.height);
+            subViews[i].origin = CGPointMake(subViews[i].origin.x-self.view.width, subViews[i].origin.y+self.view.height);
         }];
         currentTag = tag;
     }
