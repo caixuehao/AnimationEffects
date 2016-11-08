@@ -11,7 +11,7 @@
 @implementation MeteorView
 
 -(void)dealloc{
-        NSLog(@"%s",__FUNCTION__);
+//        NSLog(@"%s",__FUNCTION__);
 }
 
 -(instancetype)init{

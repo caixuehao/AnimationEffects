@@ -13,6 +13,7 @@
 #import "DanmakuViewController.h"
 #import "StarrySkyViewController.h"
 #import "JumpViewController.h"
+#import "MagicMatrixViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -30,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"test4"];
+    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵"];
     
     
     _mainTableView = ({
@@ -76,6 +77,9 @@
             break;
         case 2:
             [self.navigationController pushViewController:[[JumpViewController alloc] init] animated:YES];
+            break;
+        case 3:
+            [self.navigationController pushViewController:[[MagicMatrixViewController alloc] init] animated:YES];
             break;
         default:
             [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
