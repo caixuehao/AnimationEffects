@@ -24,6 +24,8 @@
 		FC4B43191DCB813E0023FD73 /* starry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4B43181DCB813E0023FD73 /* starry.png */; };
 		FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5D753F1DCE0CF500F23857 /* StarryEntity.m */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
+		FCCBD7131DD3187A00E841C8 /* Annular3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBD7121DD3187A00E841C8 /* Annular3DViewController.m */; };
+		FCCBD7151DD31B6100E841C8 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCBD7141DD31B6100E841C8 /* 22.png */; };
 		FCD315661DCF583300069418 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = FCD315651DCF583300069418 /* meteor.png */; };
 		FCD315681DCF583900069418 /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCD315671DCF583900069418 /* background3.jpg */; };
 		FCD3156B1DCF593F00069418 /* MeteorEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD3156A1DCF593F00069418 /* MeteorEntity.m */; };
@@ -35,6 +37,7 @@
 		FCD315811DCF956A00069418 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD315801DCF956A00069418 /* CircleView.m */; };
 		FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */; };
 		FCFBE2491DD1675300584B97 /* MagicMatrixView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBE2481DD1675300584B97 /* MagicMatrixView.m */; };
+		FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		FC5D753F1DCE0CF500F23857 /* StarryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarryEntity.m; path = StarrySky/Entity/StarryEntity.m; sourceTree = "<group>"; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		FCCBD7111DD3187A00E841C8 /* Annular3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annular3DViewController.h; path = Controller/Annular3DViewController.h; sourceTree = "<group>"; };
+		FCCBD7121DD3187A00E841C8 /* Annular3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Annular3DViewController.m; path = Controller/Annular3DViewController.m; sourceTree = "<group>"; };
+		FCCBD7141DD31B6100E841C8 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
 		FCD315651DCF583300069418 /* meteor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteor.png; sourceTree = "<group>"; };
 		FCD315671DCF583900069418 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
 		FCD315691DCF593F00069418 /* MeteorEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeteorEntity.h; path = StarrySky/Entity/MeteorEntity.h; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicMatrixViewController.m; path = MagicMatrix/Controller/MagicMatrixViewController.m; sourceTree = "<group>"; };
 		FCFBE2471DD1675300584B97 /* MagicMatrixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicMatrixView.h; path = Views/MagicMatrixView.h; sourceTree = "<group>"; };
 		FCFBE2481DD1675300584B97 /* MagicMatrixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicMatrixView.m; path = Views/MagicMatrixView.m; sourceTree = "<group>"; };
+		FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "青鸟华光简行草.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +272,7 @@
 		FC37FDFC1DC89259001F3575 /* Moduels */ = {
 			isa = PBXGroup;
 			children = (
+				FCCBD70F1DD317E300E841C8 /* Annular3D */,
 				FCFBE2411DD1633400584B97 /* MagicMatrix */,
 				FCD3156F1DCF933D00069418 /* Jump */,
 				FCC7FDAA1DCA463E00D51CDE /* StarrySky */,
@@ -288,11 +296,13 @@
 		FC37FE061DC8A07E001F3575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */,
 				FCD315651DCF583300069418 /* meteor.png */,
 				FC4B43181DCB813E0023FD73 /* starry.png */,
 				FC43890D1DC9D28F00E4F138 /* background1.jpg */,
 				FC43890E1DC9D28F00E4F138 /* background2.jpg */,
 				FCD315671DCF583900069418 /* background3.jpg */,
+				FCCBD7141DD31B6100E841C8 /* 22.png */,
 			);
 			name = Resources;
 			path = AnimationEffects/Resources;
@@ -361,6 +371,23 @@
 			children = (
 				FCD315711DCF93AA00069418 /* StarrySkyViewController.h */,
 				FCD315721DCF93AA00069418 /* StarrySkyViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FCCBD70F1DD317E300E841C8 /* Annular3D */ = {
+			isa = PBXGroup;
+			children = (
+				FCCBD7101DD3180700E841C8 /* Controller */,
+			);
+			name = Annular3D;
+			sourceTree = "<group>";
+		};
+		FCCBD7101DD3180700E841C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCCBD7111DD3187A00E841C8 /* Annular3DViewController.h */,
+				FCCBD7121DD3187A00E841C8 /* Annular3DViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -540,8 +567,10 @@
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
 				FCD315661DCF583300069418 /* meteor.png in Resources */,
 				FC4B43191DCB813E0023FD73 /* starry.png in Resources */,
+				FCCBD7151DD31B6100E841C8 /* 22.png in Resources */,
 				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
 				FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */,
+				FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */,
 				FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +651,7 @@
 				FCD3157D1DCF94FC00069418 /* DanmakuEntity.m in Sources */,
 				FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */,
 				FC37FDC71DC88FC3001F3575 /* main.m in Sources */,
+				FCCBD7131DD3187A00E841C8 /* Annular3DViewController.m in Sources */,
 				FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */,
 				FCD315731DCF93AA00069418 /* StarrySkyViewController.m in Sources */,
 				FCD315791DCF94E800069418 /* JumpViewController.m in Sources */,
