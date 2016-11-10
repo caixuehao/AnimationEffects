@@ -20,6 +20,7 @@
 }
 */
 -(void)start{
+    [self setBackgroundColor:[UIColor clearColor]];
     float height = self.height;
     float width = self.width;
     
@@ -37,6 +38,7 @@
     CAShapeLayer* circle1_1Layer=[CAShapeLayer layer];
     circle1_1Layer.path=circle1_1.CGPath;
     circle1_1Layer.strokeColor = ColorRGB(123, 0, 244).CGColor;
+    circle1_1Layer.fillColor = [UIColor clearColor].CGColor;
     circle1_1Layer.lineWidth=1;
     circle1_1Layer.frame=self.frame;
     [self.layer addSublayer:circle1_1Layer];
