@@ -15,7 +15,7 @@
 #import "JumpViewController.h"
 #import "MagicMatrixViewController.h"
 #import "Annular3DViewController.h"
-
+#import "LuaTestViewController.h"
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView* mainTableView;
@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵",@"3D图片"];
+    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵",@"3D图片",@"LuaTest"];
     
     
     _mainTableView = ({
@@ -84,6 +84,9 @@
             break;
         case 4:
             [self.navigationController pushViewController:[[Annular3DViewController alloc] init] animated:YES];
+            break;
+        case 5:
+            [self.navigationController pushViewController:[[LuaTestViewController alloc] init] animated:YES];
             break;
         default:
             [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];

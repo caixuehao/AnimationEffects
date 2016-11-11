@@ -5,4 +5,6 @@ target 'AnimationEffects' do
   
     pod 'Masonry'
 
+    pod 'wax', :path=>'/Users/cxh/GitHub/AnimationEffects/AnimationEffects/Librarys/wax/wax-master'
+    
 end

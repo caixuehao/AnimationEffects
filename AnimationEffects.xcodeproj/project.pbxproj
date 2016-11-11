@@ -23,8 +23,11 @@
 		FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC43890E1DC9D28F00E4F138 /* background2.jpg */; };
 		FC4B43191DCB813E0023FD73 /* starry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4B43181DCB813E0023FD73 /* starry.png */; };
 		FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5D753F1DCE0CF500F23857 /* StarryEntity.m */; };
+		FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */; };
+		FC8E0F6A1DD5C41800EF0A0C /* LuaTest.lua in Resources */ = {isa = PBXBuildFile; fileRef = FC8E0E9A1DD5BF5E00EF0A0C /* LuaTest.lua */; };
+		FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */; };
+		FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
-		FCCBD7131DD3187A00E841C8 /* Annular3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCBD7121DD3187A00E841C8 /* Annular3DViewController.m */; };
 		FCCBD7151DD31B6100E841C8 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCBD7141DD31B6100E841C8 /* 22.png */; };
 		FCD315661DCF583300069418 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = FCD315651DCF583300069418 /* meteor.png */; };
 		FCD315681DCF583900069418 /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCD315671DCF583900069418 /* background3.jpg */; };
@@ -36,7 +39,6 @@
 		FCD3157D1DCF94FC00069418 /* DanmakuEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD3157C1DCF94FC00069418 /* DanmakuEntity.m */; };
 		FCD315811DCF956A00069418 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD315801DCF956A00069418 /* CircleView.m */; };
 		FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */; };
-		FCFBE2491DD1675300584B97 /* MagicMatrixView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBE2481DD1675300584B97 /* MagicMatrixView.m */; };
 		FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */; };
 /* End PBXBuildFile section */
 
@@ -89,10 +91,15 @@
 		FC4B43181DCB813E0023FD73 /* starry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starry.png; sourceTree = "<group>"; };
 		FC5D753E1DCE0CF500F23857 /* StarryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarryEntity.h; path = StarrySky/Entity/StarryEntity.h; sourceTree = "<group>"; };
 		FC5D753F1DCE0CF500F23857 /* StarryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarryEntity.m; path = StarrySky/Entity/StarryEntity.m; sourceTree = "<group>"; };
+		FC8E0E9A1DD5BF5E00EF0A0C /* LuaTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = LuaTest.lua; path = LuaTest/LuaTest.lua; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.lua; };
+		FC8E0F671DD5C23200EF0A0C /* LuaTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaTestViewController.h; path = LuaTest/LuaTestViewController.h; sourceTree = "<group>"; };
+		FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LuaTestViewController.m; path = LuaTest/LuaTestViewController.m; sourceTree = "<group>"; };
+		FC8E0F6C1DD5C64600EF0A0C /* Annular3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annular3DViewController.h; sourceTree = "<group>"; };
+		FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annular3DViewController.m; sourceTree = "<group>"; };
+		FC8E0F701DD5C65200EF0A0C /* MagicMatrixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMatrixView.h; sourceTree = "<group>"; };
+		FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMatrixView.m; sourceTree = "<group>"; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		FCCBD7111DD3187A00E841C8 /* Annular3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annular3DViewController.h; path = Controller/Annular3DViewController.h; sourceTree = "<group>"; };
-		FCCBD7121DD3187A00E841C8 /* Annular3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Annular3DViewController.m; path = Controller/Annular3DViewController.m; sourceTree = "<group>"; };
 		FCCBD7141DD31B6100E841C8 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
 		FCD315651DCF583300069418 /* meteor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteor.png; sourceTree = "<group>"; };
 		FCD315671DCF583900069418 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
@@ -112,8 +119,6 @@
 		FCD315801DCF956A00069418 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = Jump/Views/CircleView.m; sourceTree = "<group>"; };
 		FCFBE2431DD1639F00584B97 /* MagicMatrixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicMatrixViewController.h; path = MagicMatrix/Controller/MagicMatrixViewController.h; sourceTree = "<group>"; };
 		FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicMatrixViewController.m; path = MagicMatrix/Controller/MagicMatrixViewController.m; sourceTree = "<group>"; };
-		FCFBE2471DD1675300584B97 /* MagicMatrixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicMatrixView.h; path = Views/MagicMatrixView.h; sourceTree = "<group>"; };
-		FCFBE2481DD1675300584B97 /* MagicMatrixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicMatrixView.m; path = Views/MagicMatrixView.m; sourceTree = "<group>"; };
 		FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "青鸟华光简行草.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +277,7 @@
 		FC37FDFC1DC89259001F3575 /* Moduels */ = {
 			isa = PBXGroup;
 			children = (
+				FC8E0E981DD5BF0400EF0A0C /* LuaTest */,
 				FCCBD70F1DD317E300E841C8 /* Annular3D */,
 				FCFBE2411DD1633400584B97 /* MagicMatrix */,
 				FCD3156F1DCF933D00069418 /* Jump */,
@@ -347,6 +353,36 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		FC8E0E981DD5BF0400EF0A0C /* LuaTest */ = {
+			isa = PBXGroup;
+			children = (
+				FC8E0E9A1DD5BF5E00EF0A0C /* LuaTest.lua */,
+				FC8E0F671DD5C23200EF0A0C /* LuaTestViewController.h */,
+				FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */,
+			);
+			name = LuaTest;
+			sourceTree = "<group>";
+		};
+		FC8E0F6B1DD5C64600EF0A0C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC8E0F6C1DD5C64600EF0A0C /* Annular3DViewController.h */,
+				FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */,
+			);
+			name = Controller;
+			path = Annular3D/Controller;
+			sourceTree = "<group>";
+		};
+		FC8E0F6F1DD5C65200EF0A0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC8E0F701DD5C65200EF0A0C /* MagicMatrixView.h */,
+				FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */,
+			);
+			name = Views;
+			path = MagicMatrix/Views;
+			sourceTree = "<group>";
+		};
 		FCC7FDA61DCA287F00D51CDE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,18 +414,9 @@
 		FCCBD70F1DD317E300E841C8 /* Annular3D */ = {
 			isa = PBXGroup;
 			children = (
-				FCCBD7101DD3180700E841C8 /* Controller */,
+				FC8E0F6B1DD5C64600EF0A0C /* Controller */,
 			);
 			name = Annular3D;
-			sourceTree = "<group>";
-		};
-		FCCBD7101DD3180700E841C8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FCCBD7111DD3187A00E841C8 /* Annular3DViewController.h */,
-				FCCBD7121DD3187A00E841C8 /* Annular3DViewController.m */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		FCD3156F1DCF933D00069418 /* Jump */ = {
@@ -432,7 +459,7 @@
 		FCFBE2411DD1633400584B97 /* MagicMatrix */ = {
 			isa = PBXGroup;
 			children = (
-				FCFBE2461DD1671D00584B97 /* Views */,
+				FC8E0F6F1DD5C65200EF0A0C /* Views */,
 				FCFBE2421DD1636400584B97 /* Controller */,
 			);
 			name = MagicMatrix;
@@ -445,15 +472,6 @@
 				FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		FCFBE2461DD1671D00584B97 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FCFBE2471DD1675300584B97 /* MagicMatrixView.h */,
-				FCFBE2481DD1675300584B97 /* MagicMatrixView.m */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,6 +588,7 @@
 				FCCBD7151DD31B6100E841C8 /* 22.png in Resources */,
 				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
 				FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */,
+				FC8E0F6A1DD5C41800EF0A0C /* LuaTest.lua in Resources */,
 				FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */,
 				FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */,
 			);
@@ -644,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */,
 				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
 				FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */,
 				FCD3156B1DCF593F00069418 /* MeteorEntity.m in Sources */,
@@ -651,17 +671,17 @@
 				FCD3157D1DCF94FC00069418 /* DanmakuEntity.m in Sources */,
 				FC37FE031DC8933B001F3575 /* MainViewController.m in Sources */,
 				FC37FDC71DC88FC3001F3575 /* main.m in Sources */,
-				FCCBD7131DD3187A00E841C8 /* Annular3DViewController.m in Sources */,
 				FC43890C1DC9D1E200E4F138 /* MainNavigationController.m in Sources */,
 				FCD315731DCF93AA00069418 /* StarrySkyViewController.m in Sources */,
 				FCD315791DCF94E800069418 /* JumpViewController.m in Sources */,
-				FCFBE2491DD1675300584B97 /* MagicMatrixView.m in Sources */,
 				FCD3156E1DCF596500069418 /* MeteorView.m in Sources */,
 				FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */,
+				FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */,
 				FCD315811DCF956A00069418 /* CircleView.m in Sources */,
 				FCD315761DCF93C300069418 /* DanmakuViewController.m in Sources */,
 				FC4388FF1DC9B76400E4F138 /* DanmakuCell.m in Sources */,
 				FC26DDFB1DCDA015004BAF93 /* StarryView.m in Sources */,
+				FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

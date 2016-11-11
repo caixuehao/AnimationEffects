@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "MainNavigationController.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <wax.h>
 @interface AppDelegate ()
 
 @end
