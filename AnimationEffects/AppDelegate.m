@@ -10,7 +10,7 @@
 #import "MainViewController.h"
 #import "MainNavigationController.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <wax.h>
+#import <wax/wax.h>
 @interface AppDelegate ()
 
 @end
@@ -25,8 +25,10 @@
     self.window.rootViewController = [[MainNavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
     
-
-     return YES;
+    wax_start(nil,nil);
+    wax_runLuaFile([[[NSBundle mainBundle] pathForResource:@"Init" ofType:@"lua"] UTF8String]);
+    
+    return YES;
     NSArray *familyNames = [UIFont familyNames];
     for( NSString *familyName in familyNames )
     {

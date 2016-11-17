@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LuaTestViewController : UIViewController
-
++(NSString*)getString;
++(LuaTestViewController*)share;
 @end

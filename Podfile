@@ -5,6 +5,6 @@ target 'AnimationEffects' do
   
     pod 'Masonry'
 
-    pod 'wax', :path=>'/Users/cxh/GitHub/AnimationEffects/AnimationEffects/Librarys/wax/wax-master'
-    
+    #pod 'wax', :path=>'/Users/cxh/GitHub/other/wax-master'
+    #pod 'wax', :git=>'git@github.com:alibaba/wax.git', :commit=>'5c762ad'
 end

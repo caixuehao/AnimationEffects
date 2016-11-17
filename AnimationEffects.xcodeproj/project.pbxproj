@@ -24,9 +24,10 @@
 		FC4B43191DCB813E0023FD73 /* starry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4B43181DCB813E0023FD73 /* starry.png */; };
 		FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5D753F1DCE0CF500F23857 /* StarryEntity.m */; };
 		FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */; };
-		FC8E0F6A1DD5C41800EF0A0C /* LuaTest.lua in Resources */ = {isa = PBXBuildFile; fileRef = FC8E0E9A1DD5BF5E00EF0A0C /* LuaTest.lua */; };
 		FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */; };
 		FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */; };
+		FCB36C451DDADD3100612FA5 /* wax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB36C441DDADD3100612FA5 /* wax.framework */; };
+		FCB36C471DDADF8300612FA5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
 		FCCBD7151DD31B6100E841C8 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCBD7141DD31B6100E841C8 /* 22.png */; };
 		FCD315661DCF583300069418 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = FCD315651DCF583300069418 /* meteor.png */; };
@@ -38,6 +39,18 @@
 		FCD315791DCF94E800069418 /* JumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD315781DCF94E800069418 /* JumpViewController.m */; };
 		FCD3157D1DCF94FC00069418 /* DanmakuEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD3157C1DCF94FC00069418 /* DanmakuEntity.m */; };
 		FCD315811DCF956A00069418 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD315801DCF956A00069418 /* CircleView.m */; };
+		FCE3DF841DDD566500E303E7 /* EnumTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF7F1DDD566500E303E7 /* EnumTable.lua */; };
+		FCE3DF851DDD566500E303E7 /* Init.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF801DDD566500E303E7 /* Init.lua */; };
+		FCE3DF861DDD566500E303E7 /* LoginViewController.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF811DDD566500E303E7 /* LoginViewController.lua */; };
+		FCE3DF871DDD566500E303E7 /* LuaTest.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF821DDD566500E303E7 /* LuaTest.lua */; };
+		FCE3DF881DDD566500E303E7 /* StartView.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF831DDD566500E303E7 /* StartView.lua */; };
+		FCE3DF8F1DDD8BE100E303E7 /* bilibili_splash_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8A1DDD8BE100E303E7 /* bilibili_splash_default@2x.png */; };
+		FCE3DF901DDD8BE100E303E7 /* bilibili_splash_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8B1DDD8BE100E303E7 /* bilibili_splash_default@3x.png */; };
+		FCE3DF911DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8C1DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png */; };
+		FCE3DF921DDD8BE100E303E7 /* bilibili_splash_iphone_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8D1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@2x.png */; };
+		FCE3DF931DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8E1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png */; };
+		FCE3DF961DDDA1A700E303E7 /* StartInfoModel.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */; };
+		FCE3DF971DDDA1A700E303E7 /* StartPageEntity.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */; };
 		FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */; };
 		FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */; };
 /* End PBXBuildFile section */
@@ -91,13 +104,14 @@
 		FC4B43181DCB813E0023FD73 /* starry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starry.png; sourceTree = "<group>"; };
 		FC5D753E1DCE0CF500F23857 /* StarryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarryEntity.h; path = StarrySky/Entity/StarryEntity.h; sourceTree = "<group>"; };
 		FC5D753F1DCE0CF500F23857 /* StarryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarryEntity.m; path = StarrySky/Entity/StarryEntity.m; sourceTree = "<group>"; };
-		FC8E0E9A1DD5BF5E00EF0A0C /* LuaTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = LuaTest.lua; path = LuaTest/LuaTest.lua; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.lua; };
 		FC8E0F671DD5C23200EF0A0C /* LuaTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaTestViewController.h; path = LuaTest/LuaTestViewController.h; sourceTree = "<group>"; };
 		FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LuaTestViewController.m; path = LuaTest/LuaTestViewController.m; sourceTree = "<group>"; };
 		FC8E0F6C1DD5C64600EF0A0C /* Annular3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annular3DViewController.h; sourceTree = "<group>"; };
 		FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annular3DViewController.m; sourceTree = "<group>"; };
 		FC8E0F701DD5C65200EF0A0C /* MagicMatrixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMatrixView.h; sourceTree = "<group>"; };
 		FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMatrixView.m; sourceTree = "<group>"; };
+		FCB36C441DDADD3100612FA5 /* wax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = wax.framework; path = AnimationEffects/Librarys/wax.framework; sourceTree = "<group>"; };
+		FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		FCCBD7141DD31B6100E841C8 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
@@ -117,6 +131,18 @@
 		FCD3157C1DCF94FC00069418 /* DanmakuEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanmakuEntity.m; sourceTree = "<group>"; };
 		FCD3157F1DCF956A00069418 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleView.h; path = Jump/Views/CircleView.h; sourceTree = "<group>"; };
 		FCD315801DCF956A00069418 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = Jump/Views/CircleView.m; sourceTree = "<group>"; };
+		FCE3DF7F1DDD566500E303E7 /* EnumTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EnumTable.lua; sourceTree = "<group>"; };
+		FCE3DF801DDD566500E303E7 /* Init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Init.lua; sourceTree = "<group>"; };
+		FCE3DF811DDD566500E303E7 /* LoginViewController.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoginViewController.lua; sourceTree = "<group>"; };
+		FCE3DF821DDD566500E303E7 /* LuaTest.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LuaTest.lua; sourceTree = "<group>"; };
+		FCE3DF831DDD566500E303E7 /* StartView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartView.lua; sourceTree = "<group>"; };
+		FCE3DF8A1DDD8BE100E303E7 /* bilibili_splash_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_default@2x.png"; sourceTree = "<group>"; };
+		FCE3DF8B1DDD8BE100E303E7 /* bilibili_splash_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_default@3x.png"; sourceTree = "<group>"; };
+		FCE3DF8C1DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bilibili_splash_iphone_bg.png; sourceTree = "<group>"; };
+		FCE3DF8D1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_iphone_bg@2x.png"; sourceTree = "<group>"; };
+		FCE3DF8E1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_iphone_bg@3x.png"; sourceTree = "<group>"; };
+		FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartInfoModel.lua; sourceTree = "<group>"; };
+		FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartPageEntity.lua; sourceTree = "<group>"; };
 		FCFBE2431DD1639F00584B97 /* MagicMatrixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicMatrixViewController.h; path = MagicMatrix/Controller/MagicMatrixViewController.h; sourceTree = "<group>"; };
 		FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicMatrixViewController.m; path = MagicMatrix/Controller/MagicMatrixViewController.m; sourceTree = "<group>"; };
 		FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "青鸟华光简行草.TTF"; sourceTree = "<group>"; };
@@ -127,7 +153,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB36C471DDADF8300612FA5 /* libsqlite3.tbd in Frameworks */,
 				87A89807B39C99F618DF48D2 /* libPods-AnimationEffects.a in Frameworks */,
+				FCB36C451DDADD3100612FA5 /* wax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +188,8 @@
 		414F8F5E1E8A96A52D99B98E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */,
+				FCB36C441DDADD3100612FA5 /* wax.framework */,
 				7E971334D130F2E98F1BB26B /* libPods-AnimationEffects.a */,
 			);
 			name = Frameworks;
@@ -302,6 +332,7 @@
 		FC37FE061DC8A07E001F3575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCE3DF7E1DDD566500E303E7 /* lua */,
 				FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */,
 				FCD315651DCF583300069418 /* meteor.png */,
 				FC4B43181DCB813E0023FD73 /* starry.png */,
@@ -309,6 +340,7 @@
 				FC43890E1DC9D28F00E4F138 /* background2.jpg */,
 				FCD315671DCF583900069418 /* background3.jpg */,
 				FCCBD7141DD31B6100E841C8 /* 22.png */,
+				FCE3DF891DDD8BE100E303E7 /* 启动页 */,
 			);
 			name = Resources;
 			path = AnimationEffects/Resources;
@@ -356,7 +388,6 @@
 		FC8E0E981DD5BF0400EF0A0C /* LuaTest */ = {
 			isa = PBXGroup;
 			children = (
-				FC8E0E9A1DD5BF5E00EF0A0C /* LuaTest.lua */,
 				FC8E0F671DD5C23200EF0A0C /* LuaTestViewController.h */,
 				FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */,
 			);
@@ -454,6 +485,32 @@
 				FCD315801DCF956A00069418 /* CircleView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		FCE3DF7E1DDD566500E303E7 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				FCE3DF7F1DDD566500E303E7 /* EnumTable.lua */,
+				FCE3DF801DDD566500E303E7 /* Init.lua */,
+				FCE3DF811DDD566500E303E7 /* LoginViewController.lua */,
+				FCE3DF821DDD566500E303E7 /* LuaTest.lua */,
+				FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */,
+				FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */,
+				FCE3DF831DDD566500E303E7 /* StartView.lua */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		FCE3DF891DDD8BE100E303E7 /* 启动页 */ = {
+			isa = PBXGroup;
+			children = (
+				FCE3DF8A1DDD8BE100E303E7 /* bilibili_splash_default@2x.png */,
+				FCE3DF8B1DDD8BE100E303E7 /* bilibili_splash_default@3x.png */,
+				FCE3DF8C1DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png */,
+				FCE3DF8D1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@2x.png */,
+				FCE3DF8E1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png */,
+			);
+			path = "启动页";
 			sourceTree = "<group>";
 		};
 		FCFBE2411DD1633400584B97 /* MagicMatrix */ = {
@@ -580,17 +637,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE3DF911DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png in Resources */,
 				FC37FDD51DC88FC3001F3575 /* LaunchScreen.storyboard in Resources */,
 				FCD315681DCF583900069418 /* background3.jpg in Resources */,
+				FCE3DF971DDDA1A700E303E7 /* StartPageEntity.lua in Resources */,
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
 				FCD315661DCF583300069418 /* meteor.png in Resources */,
 				FC4B43191DCB813E0023FD73 /* starry.png in Resources */,
 				FCCBD7151DD31B6100E841C8 /* 22.png in Resources */,
+				FCE3DF861DDD566500E303E7 /* LoginViewController.lua in Resources */,
+				FCE3DF961DDDA1A700E303E7 /* StartInfoModel.lua in Resources */,
+				FCE3DF871DDD566500E303E7 /* LuaTest.lua in Resources */,
 				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
+				FCE3DF8F1DDD8BE100E303E7 /* bilibili_splash_default@2x.png in Resources */,
+				FCE3DF921DDD8BE100E303E7 /* bilibili_splash_iphone_bg@2x.png in Resources */,
 				FC37FDD01DC88FC3001F3575 /* Main.storyboard in Resources */,
-				FC8E0F6A1DD5C41800EF0A0C /* LuaTest.lua in Resources */,
+				FCE3DF851DDD566500E303E7 /* Init.lua in Resources */,
+				FCE3DF841DDD566500E303E7 /* EnumTable.lua in Resources */,
+				FCE3DF901DDD8BE100E303E7 /* bilibili_splash_default@3x.png in Resources */,
+				FCE3DF931DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png in Resources */,
 				FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */,
 				FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */,
+				FCE3DF881DDD566500E303E7 /* StartView.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,11 +894,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnimationEffects/Librarys",
+				);
 				INFOPLIST_FILE = AnimationEffects/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.duole.login.AnimationEffects.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -840,11 +914,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnimationEffects/Librarys",
+				);
 				INFOPLIST_FILE = AnimationEffects/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.duole.login.AnimationEffects.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

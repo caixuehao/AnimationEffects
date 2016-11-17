@@ -86,7 +86,7 @@
             [self.navigationController pushViewController:[[Annular3DViewController alloc] init] animated:YES];
             break;
         case 5:
-            [self.navigationController pushViewController:[[LuaTestViewController alloc] init] animated:YES];
+            [self.navigationController pushViewController:[LuaTestViewController share] animated:YES];
             break;
         default:
             [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
