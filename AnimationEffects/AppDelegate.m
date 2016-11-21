@@ -11,6 +11,8 @@
 #import "MainNavigationController.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <wax/wax.h>
+#import <wax/wax_http.h>
+#import <wax/wax_json.h>
 @interface AppDelegate ()
 
 @end
@@ -25,9 +27,9 @@
     self.window.rootViewController = [[MainNavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
     
-    wax_start(nil,nil);
-    wax_runLuaFile([[[NSBundle mainBundle] pathForResource:@"Init" ofType:@"lua"] UTF8String]);
-    
+    wax_start("Init.lua",luaopen_wax_http,luaopen_wax_json,nil);
+//    wax_runLuaFile([[[NSBundle mainBundle] pathForResource:@"Init" ofType:@"lua"] UTF8String]);
+//    NSHTTPURLResponse
     return YES;
     NSArray *familyNames = [UIFont familyNames];
     for( NSString *familyName in familyNames )

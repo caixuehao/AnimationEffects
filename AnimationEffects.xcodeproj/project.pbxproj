@@ -26,7 +26,9 @@
 		FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */; };
 		FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */; };
 		FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */; };
-		FCB36C451DDADD3100612FA5 /* wax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB36C441DDADD3100612FA5 /* wax.framework */; };
+		FC99DF3E1DE2A01F00DB017C /* StartView.lua in Resources */ = {isa = PBXBuildFile; fileRef = FC99DF3D1DE2A01F00DB017C /* StartView.lua */; };
+		FC99DF401DE2AA2A00DB017C /* StartInfoRequest.lua in Resources */ = {isa = PBXBuildFile; fileRef = FC99DF3F1DE2AA2A00DB017C /* StartInfoRequest.lua */; };
+		FCAB739C1DE30573002AA4F2 /* wax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB739B1DE30573002AA4F2 /* wax.framework */; };
 		FCB36C471DDADF8300612FA5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
 		FCCBD7151DD31B6100E841C8 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCBD7141DD31B6100E841C8 /* 22.png */; };
@@ -43,7 +45,6 @@
 		FCE3DF851DDD566500E303E7 /* Init.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF801DDD566500E303E7 /* Init.lua */; };
 		FCE3DF861DDD566500E303E7 /* LoginViewController.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF811DDD566500E303E7 /* LoginViewController.lua */; };
 		FCE3DF871DDD566500E303E7 /* LuaTest.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF821DDD566500E303E7 /* LuaTest.lua */; };
-		FCE3DF881DDD566500E303E7 /* StartView.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF831DDD566500E303E7 /* StartView.lua */; };
 		FCE3DF8F1DDD8BE100E303E7 /* bilibili_splash_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8A1DDD8BE100E303E7 /* bilibili_splash_default@2x.png */; };
 		FCE3DF901DDD8BE100E303E7 /* bilibili_splash_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8B1DDD8BE100E303E7 /* bilibili_splash_default@3x.png */; };
 		FCE3DF911DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8C1DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png */; };
@@ -110,7 +111,9 @@
 		FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annular3DViewController.m; sourceTree = "<group>"; };
 		FC8E0F701DD5C65200EF0A0C /* MagicMatrixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMatrixView.h; sourceTree = "<group>"; };
 		FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMatrixView.m; sourceTree = "<group>"; };
-		FCB36C441DDADD3100612FA5 /* wax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = wax.framework; path = AnimationEffects/Librarys/wax.framework; sourceTree = "<group>"; };
+		FC99DF3D1DE2A01F00DB017C /* StartView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartView.lua; sourceTree = "<group>"; };
+		FC99DF3F1DE2AA2A00DB017C /* StartInfoRequest.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartInfoRequest.lua; sourceTree = "<group>"; };
+		FCAB739B1DE30573002AA4F2 /* wax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = wax.framework; path = AnimationEffects/Librarys/wax.framework; sourceTree = "<group>"; };
 		FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -135,7 +138,6 @@
 		FCE3DF801DDD566500E303E7 /* Init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Init.lua; sourceTree = "<group>"; };
 		FCE3DF811DDD566500E303E7 /* LoginViewController.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoginViewController.lua; sourceTree = "<group>"; };
 		FCE3DF821DDD566500E303E7 /* LuaTest.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LuaTest.lua; sourceTree = "<group>"; };
-		FCE3DF831DDD566500E303E7 /* StartView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartView.lua; sourceTree = "<group>"; };
 		FCE3DF8A1DDD8BE100E303E7 /* bilibili_splash_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_default@2x.png"; sourceTree = "<group>"; };
 		FCE3DF8B1DDD8BE100E303E7 /* bilibili_splash_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_default@3x.png"; sourceTree = "<group>"; };
 		FCE3DF8C1DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bilibili_splash_iphone_bg.png; sourceTree = "<group>"; };
@@ -154,8 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCB36C471DDADF8300612FA5 /* libsqlite3.tbd in Frameworks */,
+				FCAB739C1DE30573002AA4F2 /* wax.framework in Frameworks */,
 				87A89807B39C99F618DF48D2 /* libPods-AnimationEffects.a in Frameworks */,
-				FCB36C451DDADD3100612FA5 /* wax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */,
-				FCB36C441DDADD3100612FA5 /* wax.framework */,
+				FCAB739B1DE30573002AA4F2 /* wax.framework */,
 				7E971334D130F2E98F1BB26B /* libPods-AnimationEffects.a */,
 			);
 			name = Frameworks;
@@ -490,13 +492,14 @@
 		FCE3DF7E1DDD566500E303E7 /* lua */ = {
 			isa = PBXGroup;
 			children = (
+				FC99DF3D1DE2A01F00DB017C /* StartView.lua */,
+				FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */,
+				FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */,
+				FC99DF3F1DE2AA2A00DB017C /* StartInfoRequest.lua */,
 				FCE3DF7F1DDD566500E303E7 /* EnumTable.lua */,
 				FCE3DF801DDD566500E303E7 /* Init.lua */,
 				FCE3DF811DDD566500E303E7 /* LoginViewController.lua */,
 				FCE3DF821DDD566500E303E7 /* LuaTest.lua */,
-				FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */,
-				FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */,
-				FCE3DF831DDD566500E303E7 /* StartView.lua */,
 			);
 			path = lua;
 			sourceTree = "<group>";
@@ -641,12 +644,14 @@
 				FC37FDD51DC88FC3001F3575 /* LaunchScreen.storyboard in Resources */,
 				FCD315681DCF583900069418 /* background3.jpg in Resources */,
 				FCE3DF971DDDA1A700E303E7 /* StartPageEntity.lua in Resources */,
+				FC99DF401DE2AA2A00DB017C /* StartInfoRequest.lua in Resources */,
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
 				FCD315661DCF583300069418 /* meteor.png in Resources */,
 				FC4B43191DCB813E0023FD73 /* starry.png in Resources */,
 				FCCBD7151DD31B6100E841C8 /* 22.png in Resources */,
 				FCE3DF861DDD566500E303E7 /* LoginViewController.lua in Resources */,
 				FCE3DF961DDDA1A700E303E7 /* StartInfoModel.lua in Resources */,
+				FC99DF3E1DE2A01F00DB017C /* StartView.lua in Resources */,
 				FCE3DF871DDD566500E303E7 /* LuaTest.lua in Resources */,
 				FC4389101DC9D28F00E4F138 /* background2.jpg in Resources */,
 				FCE3DF8F1DDD8BE100E303E7 /* bilibili_splash_default@2x.png in Resources */,
@@ -658,7 +663,6 @@
 				FCE3DF931DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png in Resources */,
 				FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */,
 				FC43890F1DC9D28F00E4F138 /* background1.jpg in Resources */,
-				FCE3DF881DDD566500E303E7 /* StartView.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,6 +903,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnimationEffects/Librarys",
 				);
+				IBSC_OTHER_FLAGS = "";
 				INFOPLIST_FILE = AnimationEffects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -919,6 +924,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnimationEffects/Librarys",
 				);
+				IBSC_OTHER_FLAGS = "";
 				INFOPLIST_FILE = AnimationEffects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
