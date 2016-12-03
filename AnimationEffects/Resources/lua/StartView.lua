@@ -9,7 +9,12 @@ function init(self)
 	self.model = StartInfoModel:init();
 
 	self:setFrame(UIScreen:mainScreen():bounds());
-	self:loadDefaultSubviews(self);
+	if(self.model.currentStartPage) then
+		self:loadInternetSubviews(self);
+	else
+		self:loadDefaultSubviews(self);
+	end
+	
 	self:loadActions(self);
 	return self;
 end
@@ -21,11 +26,25 @@ end
 function timerAction(self)
 	
 	self.skipTime = self.skipTime - 1;
-	if(self.skipTime == 0)
-		then
-		self:remove(self);
+	if(self.skipTime == 0) then
+		
+		if(self.isJump)then
+			print(self.model.currentStartPage.param);
+			--URLRouter:openURL(self.model.currentStartPage.param);
 		end
+		self:remove(self);
+	end
 end
+
+function touchesEnded_withEvent( self,touches,event)
+	local  point = touches:anyObject():locationInView(self);
+	local  h = UIScreen:mainScreen():bounds().height;
+	local  w = UIScreen:mainScreen():bounds().width;
+	if(point.y > h*0.7 and point.y<h*0.9 and point.x > w*0.3 and point.x < w*0.7) then
+		self.isJump = true;
+	end
+end
+
 
 function  remove(self)
 	print('remove');
@@ -38,7 +57,23 @@ function  remove(self)
 	end))
 end
 
+function loadInternetSubviews( self )
 
+	backgroundImageView = UIImageView:init();
+	backgroundImageView:sdUNDERxLINEsetImageWithURL(NSURL:URLWithString(self.model.currentStartPage["image"]));
+	self:addSubview(backgroundImageView);
+
+	--lua版懒得加跳过按钮了
+
+
+
+
+	backgroundImageView:masUNDERxLINEmakeConstraints(toblock(function ( make )
+		make:edges():equalTo()(self);
+	end,{"void", "MASConstraintMaker *"}))
+
+
+end
 
 function loadDefaultSubviews(self)
 	self.super:setBackgroundColor(UIColor:colorWithRed_green_blue_alpha(246.0/255.0,246.0/255.0,246.0/255.0,1));

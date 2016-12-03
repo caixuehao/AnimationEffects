@@ -13,6 +13,8 @@
 #import <wax/wax.h>
 #import <wax/wax_http.h>
 #import <wax/wax_json.h>
+
+#import "HttpsTest.h"
 @interface AppDelegate ()
 
 @end
@@ -27,42 +29,48 @@
     self.window.rootViewController = [[MainNavigationController alloc] initWithRootViewController:mainViewController];
     [self.window makeKeyAndVisible];
     
-    wax_start("Init.lua",luaopen_wax_http,luaopen_wax_json,nil);
+//    wax_start("Init.lua",luaopen_wax_http,luaopen_wax_json,nil);
 //    wax_runLuaFile([[[NSBundle mainBundle] pathForResource:@"Init" ofType:@"lua"] UTF8String]);
 //    NSHTTPURLResponse
+    [[HttpsTest share] start];
     return YES;
-    NSArray *familyNames = [UIFont familyNames];
-    for( NSString *familyName in familyNames )
-    {
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-        for( NSString *fontName in fontNames )
-        {
-            printf( "\tFont: %s \n", [fontName UTF8String] );
-        }
-    }
-    //UmWJ4UC22ENujir1MA2opA
-     char str1[] = "1272134953352671";
-     char str2[] = "3go8&$8*3*3h0k(2)2";
-    
-    for (int i = 0;  i < strlen(str1); ++i) {
-        str1[i] = str1[i]^str2[i%strlen(str1)];
-    }
-    NSLog(@"%s",str1);
-    
-    const char *original_str = str1;
-    unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(original_str, (CC_LONG)strlen(original_str), result);
-    NSLog(@"%s",result);
     
     
-    NSData *nsdata = [[NSString stringWithFormat:@"%s",result]  dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:3];
-    NSLog(@"%@",base64Encoded);
     
-    base64Encoded = [base64Encoded stringByReplacingOccurrencesOfString:@"/" withString:@"+"];
-    base64Encoded = [base64Encoded stringByReplacingOccurrencesOfString:@"_" withString:@"-"];
     
-    NSLog(@"%@",base64Encoded);
+    
+//    NSArray *familyNames = [UIFont familyNames];
+//    for( NSString *familyName in familyNames )
+//    {
+//        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+//        for( NSString *fontName in fontNames )
+//        {
+//            printf( "\tFont: %s \n", [fontName UTF8String] );
+//        }
+//    }
+//    //UmWJ4UC22ENujir1MA2opA
+//     char str1[] = "1272134953352671";
+//     char str2[] = "3go8&$8*3*3h0k(2)2";
+//    
+//    for (int i = 0;  i < strlen(str1); ++i) {
+//        str1[i] = str1[i]^str2[i%strlen(str1)];
+//    }
+//    NSLog(@"%s",str1);
+//    
+//    const char *original_str = str1;
+//    unsigned char result[CC_MD5_DIGEST_LENGTH];
+//    CC_MD5(original_str, (CC_LONG)strlen(original_str), result);
+//    NSLog(@"%s",result);
+//    
+//    
+//    NSData *nsdata = [[NSString stringWithFormat:@"%s",result]  dataUsingEncoding:NSUTF8StringEncoding];
+//    NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:3];
+//    NSLog(@"%@",base64Encoded);
+//    
+//    base64Encoded = [base64Encoded stringByReplacingOccurrencesOfString:@"/" withString:@"+"];
+//    base64Encoded = [base64Encoded stringByReplacingOccurrencesOfString:@"_" withString:@"-"];
+//    
+//    NSLog(@"%@",base64Encoded);
    
 }
 

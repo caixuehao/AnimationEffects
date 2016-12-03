@@ -52,6 +52,8 @@
 		FCE3DF931DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF8E1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png */; };
 		FCE3DF961DDDA1A700E303E7 /* StartInfoModel.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */; };
 		FCE3DF971DDDA1A700E303E7 /* StartPageEntity.lua in Resources */ = {isa = PBXBuildFile; fileRef = FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */; };
+		FCE65B461DF36CB7001DA074 /* HttpsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE65B451DF36CB7001DA074 /* HttpsTest.m */; };
+		FCE65B491DF3721F001DA074 /* NSURLSession+HTTPS.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE65B481DF3721F001DA074 /* NSURLSession+HTTPS.m */; };
 		FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */; };
 		FCFBE24E1DD1B03A00584B97 /* 青鸟华光简行草.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */; };
 /* End PBXBuildFile section */
@@ -145,6 +147,10 @@
 		FCE3DF8E1DDD8BE100E303E7 /* bilibili_splash_iphone_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_iphone_bg@3x.png"; sourceTree = "<group>"; };
 		FCE3DF941DDDA1A700E303E7 /* StartInfoModel.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartInfoModel.lua; sourceTree = "<group>"; };
 		FCE3DF951DDDA1A700E303E7 /* StartPageEntity.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartPageEntity.lua; sourceTree = "<group>"; };
+		FCE65B441DF36CB7001DA074 /* HttpsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpsTest.h; path = HttpsTest/HttpsTest.h; sourceTree = "<group>"; };
+		FCE65B451DF36CB7001DA074 /* HttpsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpsTest.m; path = HttpsTest/HttpsTest.m; sourceTree = "<group>"; };
+		FCE65B471DF3721F001DA074 /* NSURLSession+HTTPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+HTTPS.h"; path = "HttpsTest/NSURLSession+HTTPS.h"; sourceTree = "<group>"; };
+		FCE65B481DF3721F001DA074 /* NSURLSession+HTTPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+HTTPS.m"; path = "HttpsTest/NSURLSession+HTTPS.m"; sourceTree = "<group>"; };
 		FCFBE2431DD1639F00584B97 /* MagicMatrixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicMatrixViewController.h; path = MagicMatrix/Controller/MagicMatrixViewController.h; sourceTree = "<group>"; };
 		FCFBE2441DD1639F00584B97 /* MagicMatrixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicMatrixViewController.m; path = MagicMatrix/Controller/MagicMatrixViewController.m; sourceTree = "<group>"; };
 		FCFBE24D1DD1B03A00584B97 /* 青鸟华光简行草.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "青鸟华光简行草.TTF"; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 		FC37FDFC1DC89259001F3575 /* Moduels */ = {
 			isa = PBXGroup;
 			children = (
+				FCE65B401DF36C77001DA074 /* HttpsTest */,
 				FC8E0E981DD5BF0400EF0A0C /* LuaTest */,
 				FCCBD70F1DD317E300E841C8 /* Annular3D */,
 				FCFBE2411DD1633400584B97 /* MagicMatrix */,
@@ -516,6 +523,17 @@
 			path = "启动页";
 			sourceTree = "<group>";
 		};
+		FCE65B401DF36C77001DA074 /* HttpsTest */ = {
+			isa = PBXGroup;
+			children = (
+				FCE65B441DF36CB7001DA074 /* HttpsTest.h */,
+				FCE65B451DF36CB7001DA074 /* HttpsTest.m */,
+				FCE65B471DF3721F001DA074 /* NSURLSession+HTTPS.h */,
+				FCE65B481DF3721F001DA074 /* NSURLSession+HTTPS.m */,
+			);
+			name = HttpsTest;
+			sourceTree = "<group>";
+		};
 		FCFBE2411DD1633400584B97 /* MagicMatrix */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,6 +622,7 @@
 				TargetAttributes = {
 					FC37FDC11DC88FC3001F3575 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4D4NPXF9CY;
 					};
 					FC37FDDA1DC88FC3001F3575 = {
 						CreatedOnToolsVersion = 7.3;
@@ -737,6 +756,7 @@
 			files = (
 				FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */,
 				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
+				FCE65B491DF3721F001DA074 /* NSURLSession+HTTPS.m in Sources */,
 				FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */,
 				FCD3156B1DCF593F00069418 /* MeteorEntity.m in Sources */,
 				FC37FDCA1DC88FC3001F3575 /* AppDelegate.m in Sources */,
@@ -748,6 +768,7 @@
 				FCD315791DCF94E800069418 /* JumpViewController.m in Sources */,
 				FCD3156E1DCF596500069418 /* MeteorView.m in Sources */,
 				FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */,
+				FCE65B461DF36CB7001DA074 /* HttpsTest.m in Sources */,
 				FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */,
 				FCD315811DCF956A00069418 /* CircleView.m in Sources */,
 				FCD315761DCF93C300069418 /* DanmakuViewController.m in Sources */,
