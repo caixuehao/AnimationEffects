@@ -4,7 +4,9 @@
 target 'AnimationEffects' do
   
     pod 'Masonry'
+    
     pod 'SDWebImage'
+        
     pod 'AFNetworking'
     #pod 'wax', :path=>'/Users/cxh/GitHub/other/wax-master'
     #pod 'wax', :git=>'git@github.com:alibaba/wax.git', :commit=>'5c762ad'
