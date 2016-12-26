@@ -32,7 +32,7 @@
 //    wax_start("Init.lua",luaopen_wax_http,luaopen_wax_json,nil);
 //    wax_runLuaFile([[[NSBundle mainBundle] pathForResource:@"Init" ofType:@"lua"] UTF8String]);
 //    NSHTTPURLResponse
-    [[HttpsTest share] start];
+//    [[HttpsTest share] start];
     return YES;
     
     

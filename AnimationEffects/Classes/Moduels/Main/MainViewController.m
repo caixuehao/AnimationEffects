@@ -16,6 +16,10 @@
 #import "MagicMatrixViewController.h"
 #import "Annular3DViewController.h"
 #import "LuaTestViewController.h"
+#import "QRCodeController.h"
+#import "WhiteViewController.h"
+#import "SocketTest.h"
+
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView* mainTableView;
@@ -32,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵",@"3D图片",@"LuaTest"];
+    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵",@"3D图片",@"LuaTest",@"二维码生成",@"白条(看起来有点像裸眼3D)",@"socket"];
     
     
     _mainTableView = ({
@@ -87,6 +91,14 @@
             break;
         case 5:
             [self.navigationController pushViewController:[LuaTestViewController share] animated:YES];
+            break;
+        case 6:
+            [self.navigationController pushViewController:[[QRCodeController alloc] init] animated:YES];
+            break;
+        case 7:
+            [self.navigationController pushViewController:[[WhiteViewController alloc] init] animated:YES];
+        case 8:
+            [self.navigationController pushViewController:[[SocketTest alloc] init] animated:YES];
             break;
         default:
             [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
