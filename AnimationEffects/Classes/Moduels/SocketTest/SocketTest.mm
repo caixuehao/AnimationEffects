@@ -30,6 +30,7 @@
     int socketFileDescriptor;
     //http://blog.csdn.net/samulelin/article/details/4431351
      struct sockaddr_in servaddr;
+    int connectreturn;
 }
 
 -(void)dealloc{
@@ -37,26 +38,36 @@
 }
 -(void)viewDidLoad{
     [self loadSubViews];
-    [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
-         [self createSocket];
-    }];
+
    
    
 }
 
--(void)send{
+-(void)createServerSocket{
+    [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
+        [self createSocket];
+    }];
+}
+
+-(void)createClientSocket{
      socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0);
     
     struct sockaddr_in socketParameters;
     socketParameters.sin_family = AF_INET;
-    socketParameters.sin_port = htons(1995);
+    socketParameters.sin_port = htons(1989);
     socketParameters.sin_addr.s_addr = inet_addr("192.168.1.91");
     
-    int connectreturn = connect(socketFileDescriptor,(struct sockaddr *) &socketParameters, sizeof(socketParameters));
-    NSLog(@"connectreturn:%d errno:%d len:%lu",connectreturn,errno, sizeof(socketParameters));
-    NSLog(@"%@",[self getIPAddress]);
-}
+    connectreturn = connect(socketFileDescriptor,(struct sockaddr *) &socketParameters, sizeof(socketParameters));
+    NSLog(@"connectreturn:%d errno:%d str:%s len:%lu",connectreturn,errno,strerror(errno), sizeof(socketParameters));
+//    NSLog(@"%@",[self getIPAddress]);
 
+}
+-(void)sendClick{
+    char message[20] = "hello socket";
+    send(socketFileDescriptor, message, strlen(message)+1, 0);
+    NSLog(@"sendClick");
+//    close(socketFileDescriptor);
+}
 //192.168.1.91
 //192.168.3.120
 
@@ -73,10 +84,10 @@
      //http://blog.csdn.net/nancy530421/article/details/6714974
     NSLog(@"socketFileDescriptor:%d",socketFileDescriptor);
     if (socketFileDescriptor == -1) return;
-    
+    NSLog(@"erron:%d str:%s",errno,strerror(errno));
     //绑定端口 bind
     servaddr.sin_family = AF_INET;
-    servaddr.sin_port = htons(1995);//端口？
+    servaddr.sin_port = htons(1989);//端口？
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);//INADDR_ANY表示任何IP
 //    servaddr.sin_addr.s_addr= inet_addr([[self getIPAddress] UTF8String]);//将一个点分十进制的IP转换成一个长整数型数
 //    struct ifaddrs *interfaces = NULL;
@@ -107,14 +118,19 @@
              * 参数：addr  这是一个结果参数，它用来接受一个返回值，这返回值指定客户端的地址
              * 参数：len 描述 addr 的长度
              */
-//            struct sockaddr* clientaddr;
-//            memset((void *)&clientaddr, 0, sizeof(clientaddr));
-            socklen_t len = sizeof(sockaddr);
-            int acceptreturn = accept(socketFileDescriptor, (struct sockaddr *) &servaddr, &len);
-            NSLog(@"acceptreturn:%d",acceptreturn);
-            if(acceptreturn < 0)return;
-//        }
-//    }];
+    [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
+        socklen_t len = sizeof(servaddr);
+        char message[100] = "111111111111111111111111111111111111";
+        int acceptreturn = accept(socketFileDescriptor, (struct sockaddr *) &servaddr, &len);
+        NSLog(@"acceptreturn:%d",acceptreturn);
+        if(acceptreturn < 0)return;
+        
+        while ( true)//接收并打印客户端数据
+        {
+            size_t recvreturn = recv(acceptreturn,message, 100, 0);
+            if(recvreturn == acceptreturn)NSLog(@"recvreturn:%zu message:%s",recvreturn,message);
+        }
+    }];
 }
 
 
@@ -150,13 +166,48 @@
 -(void)loadSubViews{
     self.view.backgroundColor = [UIColor grayColor];
     
-    UIButton* button = [[UIButton alloc] init];
-    [button setTitle:@"send" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    UIButton* clientBtn = ({
+        UIButton* button = [[UIButton alloc] init];
+        [button setTitle:@"ClientBtn" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(createClientSocket) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+        button;
+    });
+
+    UIButton* serverBtn = ({
+        UIButton* button = [[UIButton alloc] init];
+        [button setTitle:@"serverBtn" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(createServerSocket) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+        button;
+    });
     
-    [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
+    UIButton* sendBtn = ({
+        UIButton* button = [[UIButton alloc] init];
+        [button setTitle:@"sendBtn" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+        button;
+    });
+    
+    
+    [clientBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(@100);
+        make.size.mas_equalTo(CGSizeMake(100, 30));
+    }];
+    
+    
+    [serverBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(@150);
+        make.size.mas_equalTo(CGSizeMake(100, 30));
+    }];
+    
+    
+    [sendBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(@50);
         make.size.mas_equalTo(CGSizeMake(100, 30));
     }];
 }
