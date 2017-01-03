@@ -24,7 +24,7 @@
 		FC4B43191DCB813E0023FD73 /* starry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4B43181DCB813E0023FD73 /* starry.png */; };
 		FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5D753F1DCE0CF500F23857 /* StarryEntity.m */; };
 		FC5F840C1E0ECAD70070B84B /* WhiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5F840B1E0ECAD70070B84B /* WhiteViewController.m */; };
-		FC5F84101E0ED6C60070B84B /* SocketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5F840F1E0ED6C60070B84B /* SocketTest.m */; };
+		FC5F84101E0ED6C60070B84B /* SocketTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC5F840F1E0ED6C60070B84B /* SocketTest.mm */; };
 		FC68FD221E0578860085A7BC /* QRcode1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC68FD211E0578860085A7BC /* QRcode1.png */; };
 		FC68FD241E05A9F40085A7BC /* 大傻逼.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC68FD231E05A9F40085A7BC /* 大傻逼.jpg */; };
 		FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */; };
@@ -116,7 +116,7 @@
 		FC5F840A1E0ECAD70070B84B /* WhiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteViewController.h; sourceTree = "<group>"; };
 		FC5F840B1E0ECAD70070B84B /* WhiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteViewController.m; sourceTree = "<group>"; };
 		FC5F840E1E0ED6C60070B84B /* SocketTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketTest.h; path = SocketTest/SocketTest.h; sourceTree = "<group>"; };
-		FC5F840F1E0ED6C60070B84B /* SocketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocketTest.m; path = SocketTest/SocketTest.m; sourceTree = "<group>"; };
+		FC5F840F1E0ED6C60070B84B /* SocketTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SocketTest.mm; path = SocketTest/SocketTest.mm; sourceTree = "<group>"; };
 		FC68FD211E0578860085A7BC /* QRcode1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRcode1.png; sourceTree = "<group>"; };
 		FC68FD231E05A9F40085A7BC /* 大傻逼.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "大傻逼.jpg"; sourceTree = "<group>"; };
 		FC8E0F671DD5C23200EF0A0C /* LuaTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaTestViewController.h; path = LuaTest/LuaTestViewController.h; sourceTree = "<group>"; };
@@ -428,7 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5F840E1E0ED6C60070B84B /* SocketTest.h */,
-				FC5F840F1E0ED6C60070B84B /* SocketTest.m */,
+				FC5F840F1E0ED6C60070B84B /* SocketTest.mm */,
 			);
 			name = SocketTest;
 			sourceTree = "<group>";
@@ -680,7 +680,6 @@
 				TargetAttributes = {
 					FC37FDC11DC88FC3001F3575 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4D4NPXF9CY;
 					};
 					FC37FDDA1DC88FC3001F3575 = {
 						CreatedOnToolsVersion = 7.3;
@@ -817,7 +816,7 @@
 				FC5F840C1E0ECAD70070B84B /* WhiteViewController.m in Sources */,
 				FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */,
 				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
-				FC5F84101E0ED6C60070B84B /* SocketTest.m in Sources */,
+				FC5F84101E0ED6C60070B84B /* SocketTest.mm in Sources */,
 				FCE65B491DF3721F001DA074 /* NSURLSession+HTTPS.m in Sources */,
 				FC5D75401DCE0CF500F23857 /* StarryEntity.m in Sources */,
 				FCD3156B1DCF593F00069418 /* MeteorEntity.m in Sources */,
@@ -984,6 +983,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnimationEffects/Librarys",
@@ -1005,6 +1005,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnimationEffects/Librarys",

@@ -97,6 +97,7 @@
             break;
         case 7:
             [self.navigationController pushViewController:[[WhiteViewController alloc] init] animated:YES];
+            break;
         case 8:
             [self.navigationController pushViewController:[[SocketTest alloc] init] animated:YES];
             break;
