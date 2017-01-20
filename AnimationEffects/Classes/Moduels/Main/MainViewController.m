@@ -19,6 +19,8 @@
 #import "QRCodeController.h"
 #import "WhiteViewController.h"
 #import "SocketTest.h"
+#import "SendMailViewController.h"
+#import "HaloViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -36,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵",@"3D图片",@"LuaTest",@"二维码生成",@"白条(看起来有点像裸眼3D)",@"socket"];
+    _titlesArr = @[@"弹幕",@"星空",@"视图跳跃",@"魔法阵",@"3D图片",@"LuaTest",@"二维码生成",@"白条(看起来有点像裸眼3D)",@"socket",@"发送邮件",@"光晕"];
     
     
     _mainTableView = ({
@@ -100,6 +102,12 @@
             break;
         case 8:
             [self.navigationController pushViewController:[[SocketTest alloc] init] animated:YES];
+            break;
+        case 9:
+            [self.navigationController pushViewController:[[SendMailViewController alloc] init] animated:YES];
+            break;
+            case 10:
+            [self.navigationController pushViewController:[[HaloViewController alloc] init] animated:YES];
             break;
         default:
             [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];

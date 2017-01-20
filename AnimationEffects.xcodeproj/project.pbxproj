@@ -30,10 +30,16 @@
 		FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F681DD5C23200EF0A0C /* LuaTestViewController.m */; };
 		FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */; };
 		FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */; };
+		FC974E941E31B37100890F83 /* CALayer+Halo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC974E911E31B37100890F83 /* CALayer+Halo.m */; };
+		FC974E951E31B37100890F83 /* LYHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC974E931E31B37100890F83 /* LYHaloLayer.m */; };
+		FC974E981E31B39000890F83 /* HaloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC974E971E31B39000890F83 /* HaloViewController.m */; };
 		FC99DF3E1DE2A01F00DB017C /* StartView.lua in Resources */ = {isa = PBXBuildFile; fileRef = FC99DF3D1DE2A01F00DB017C /* StartView.lua */; };
 		FC99DF401DE2AA2A00DB017C /* StartInfoRequest.lua in Resources */ = {isa = PBXBuildFile; fileRef = FC99DF3F1DE2AA2A00DB017C /* StartInfoRequest.lua */; };
 		FCAB739C1DE30573002AA4F2 /* wax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB739B1DE30573002AA4F2 /* wax.framework */; };
 		FCB36C471DDADF8300612FA5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */; };
+		FCB60B671E1E2EB500308B7B /* SendMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB60B651E1E2EB500308B7B /* SendMailViewController.m */; };
+		FCB60B681E1E2EB500308B7B /* SendMailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB60B661E1E2EB500308B7B /* SendMailViewController.xib */; };
+		FCB60B6A1E1E341500308B7B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB60B691E1E341500308B7B /* MessageUI.framework */; };
 		FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */; };
 		FCCBD7151DD31B6100E841C8 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCBD7141DD31B6100E841C8 /* 22.png */; };
 		FCD315661DCF583300069418 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = FCD315651DCF583300069418 /* meteor.png */; };
@@ -125,10 +131,20 @@
 		FC8E0F6D1DD5C64600EF0A0C /* Annular3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annular3DViewController.m; sourceTree = "<group>"; };
 		FC8E0F701DD5C65200EF0A0C /* MagicMatrixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMatrixView.h; sourceTree = "<group>"; };
 		FC8E0F711DD5C65200EF0A0C /* MagicMatrixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMatrixView.m; sourceTree = "<group>"; };
+		FC974E901E31B37100890F83 /* CALayer+Halo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Halo.h"; sourceTree = "<group>"; };
+		FC974E911E31B37100890F83 /* CALayer+Halo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Halo.m"; sourceTree = "<group>"; };
+		FC974E921E31B37100890F83 /* LYHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHaloLayer.h; sourceTree = "<group>"; };
+		FC974E931E31B37100890F83 /* LYHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHaloLayer.m; sourceTree = "<group>"; };
+		FC974E961E31B39000890F83 /* HaloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaloViewController.h; sourceTree = "<group>"; };
+		FC974E971E31B39000890F83 /* HaloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaloViewController.m; sourceTree = "<group>"; };
 		FC99DF3D1DE2A01F00DB017C /* StartView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartView.lua; sourceTree = "<group>"; };
 		FC99DF3F1DE2AA2A00DB017C /* StartInfoRequest.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StartInfoRequest.lua; sourceTree = "<group>"; };
 		FCAB739B1DE30573002AA4F2 /* wax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = wax.framework; path = AnimationEffects/Librarys/wax.framework; sourceTree = "<group>"; };
 		FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FCB60B641E1E2EB500308B7B /* SendMailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendMailViewController.h; path = SendMail/SendMailViewController.h; sourceTree = "<group>"; };
+		FCB60B651E1E2EB500308B7B /* SendMailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendMailViewController.m; path = SendMail/SendMailViewController.m; sourceTree = "<group>"; };
+		FCB60B661E1E2EB500308B7B /* SendMailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SendMailViewController.xib; path = SendMail/SendMailViewController.xib; sourceTree = "<group>"; };
+		FCB60B691E1E341500308B7B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FCC7FDA71DCA287F00D51CDE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		FCC7FDA81DCA287F00D51CDE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		FCCBD7141DD31B6100E841C8 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
@@ -177,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB60B6A1E1E341500308B7B /* MessageUI.framework in Frameworks */,
 				FCB36C471DDADF8300612FA5 /* libsqlite3.tbd in Frameworks */,
 				FCAB739C1DE30573002AA4F2 /* wax.framework in Frameworks */,
 				87A89807B39C99F618DF48D2 /* libPods-AnimationEffects.a in Frameworks */,
@@ -212,6 +229,7 @@
 		414F8F5E1E8A96A52D99B98E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCB60B691E1E341500308B7B /* MessageUI.framework */,
 				FCB36C461DDADF8300612FA5 /* libsqlite3.tbd */,
 				FCAB739B1DE30573002AA4F2 /* wax.framework */,
 				7E971334D130F2E98F1BB26B /* libPods-AnimationEffects.a */,
@@ -331,6 +349,8 @@
 		FC37FDFC1DC89259001F3575 /* Moduels */ = {
 			isa = PBXGroup;
 			children = (
+				FC974E8F1E31B37100890F83 /* HaloLayer */,
+				FCB60B631E1E2E8700308B7B /* SendMail */,
 				FC5F840D1E0ED6730070B84B /* SocketTest */,
 				FC5F84091E0ECABA0070B84B /* WhiteView */,
 				FCD911491E00432600451067 /* QRcode */,
@@ -460,6 +480,29 @@
 			);
 			name = Views;
 			path = MagicMatrix/Views;
+			sourceTree = "<group>";
+		};
+		FC974E8F1E31B37100890F83 /* HaloLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FC974E901E31B37100890F83 /* CALayer+Halo.h */,
+				FC974E911E31B37100890F83 /* CALayer+Halo.m */,
+				FC974E921E31B37100890F83 /* LYHaloLayer.h */,
+				FC974E931E31B37100890F83 /* LYHaloLayer.m */,
+				FC974E961E31B39000890F83 /* HaloViewController.h */,
+				FC974E971E31B39000890F83 /* HaloViewController.m */,
+			);
+			path = HaloLayer;
+			sourceTree = "<group>";
+		};
+		FCB60B631E1E2E8700308B7B /* SendMail */ = {
+			isa = PBXGroup;
+			children = (
+				FCB60B641E1E2EB500308B7B /* SendMailViewController.h */,
+				FCB60B651E1E2EB500308B7B /* SendMailViewController.m */,
+				FCB60B661E1E2EB500308B7B /* SendMailViewController.xib */,
+			);
+			name = SendMail;
 			sourceTree = "<group>";
 		};
 		FCC7FDA61DCA287F00D51CDE /* View */ = {
@@ -719,6 +762,7 @@
 				FCE3DF911DDD8BE100E303E7 /* bilibili_splash_iphone_bg.png in Resources */,
 				FC37FDD51DC88FC3001F3575 /* LaunchScreen.storyboard in Resources */,
 				FCD315681DCF583900069418 /* background3.jpg in Resources */,
+				FCB60B681E1E2EB500308B7B /* SendMailViewController.xib in Resources */,
 				FCE3DF971DDDA1A700E303E7 /* StartPageEntity.lua in Resources */,
 				FC99DF401DE2AA2A00DB017C /* StartInfoRequest.lua in Resources */,
 				FC37FDD21DC88FC3001F3575 /* Assets.xcassets in Resources */,
@@ -814,6 +858,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5F840C1E0ECAD70070B84B /* WhiteViewController.m in Sources */,
+				FC974E981E31B39000890F83 /* HaloViewController.m in Sources */,
 				FC8E0F721DD5C65200EF0A0C /* MagicMatrixView.m in Sources */,
 				FCC7FDA91DCA287F00D51CDE /* UIView+Frame.m in Sources */,
 				FC5F84101E0ED6C60070B84B /* SocketTest.mm in Sources */,
@@ -832,10 +877,13 @@
 				FCD3156E1DCF596500069418 /* MeteorView.m in Sources */,
 				FCFBE2451DD1639F00584B97 /* MagicMatrixViewController.m in Sources */,
 				FCE65B461DF36CB7001DA074 /* HttpsTest.m in Sources */,
+				FCB60B671E1E2EB500308B7B /* SendMailViewController.m in Sources */,
 				FC8E0F6E1DD5C64600EF0A0C /* Annular3DViewController.m in Sources */,
 				FCD315811DCF956A00069418 /* CircleView.m in Sources */,
+				FC974E951E31B37100890F83 /* LYHaloLayer.m in Sources */,
 				FCD315761DCF93C300069418 /* DanmakuViewController.m in Sources */,
 				FC4388FF1DC9B76400E4F138 /* DanmakuCell.m in Sources */,
+				FC974E941E31B37100890F83 /* CALayer+Halo.m in Sources */,
 				FC26DDFB1DCDA015004BAF93 /* StarryView.m in Sources */,
 				FC8E0F691DD5C23200EF0A0C /* LuaTestViewController.m in Sources */,
 			);

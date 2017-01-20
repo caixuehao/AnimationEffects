@@ -8,6 +8,8 @@ target 'AnimationEffects' do
     pod 'SDWebImage'
         
     pod 'AFNetworking'
+
+    pod 'skpsmtpmessage'
     #pod 'wax', :path=>'/Users/cxh/GitHub/other/wax-master'
     #pod 'wax', :git=>'git@github.com:alibaba/wax.git', :commit=>'5c762ad'
 end

@@ -50,23 +50,49 @@
 }
 
 -(void)createClientSocket{
-     socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0);
+     socketFileDescriptor = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    
+//    int fcntlreturn = fcntl(socketFileDescriptor, F_GETFL,0);
+//    fcntl(socketFileDescriptor, fcntlreturn|O_NONBLOCK);
     
     struct sockaddr_in socketParameters;
     socketParameters.sin_family = AF_INET;
-    socketParameters.sin_port = htons(1989);
+    socketParameters.sin_port = htons(1995);
     socketParameters.sin_addr.s_addr = inet_addr("192.168.1.91");
-    
+    //http://blog.csdn.net/cj83111/article/details/5364138
     connectreturn = connect(socketFileDescriptor,(struct sockaddr *) &socketParameters, sizeof(socketParameters));
     NSLog(@"connectreturn:%d errno:%d str:%s len:%lu",connectreturn,errno,strerror(errno), sizeof(socketParameters));
+    
+    
+//    for (int i = 0; i < 256; i++) {
+//        for (int ii = 0; ii < 256; ii++) {
+//            struct sockaddr_in socketParameters;
+//            socketParameters.sin_family = AF_INET;
+//            socketParameters.sin_port = htons(1995);
+//            NSString* str = [NSString stringWithFormat:@"192.168.%d.%d",i,ii];
+//            NSLog(@"%s",[str UTF8String]);
+//            socketParameters.sin_addr.s_addr = inet_addr([str UTF8String]);
+//            //http://blog.csdn.net/cj83111/article/details/5364138
+//            connectreturn = connect(socketFileDescriptor,(struct sockaddr *) &socketParameters, sizeof(socketParameters));
+//            NSLog(@"connectreturn:%d errno:%d str:%s len:%lu",connectreturn,errno,strerror(errno), sizeof(socketParameters));
+//            if(connectreturn == 0){
+//              
+//                i = 256;break;
+//            }
+//        }
+//    }
+    
 //    NSLog(@"%@",[self getIPAddress]);
 
 }
 -(void)sendClick{
-    char message[20] = "hello socket";
-    send(socketFileDescriptor, message, strlen(message)+1, 0);
-    NSLog(@"sendClick");
-//    close(socketFileDescriptor);
+
+    NSDictionary* dic = @{@"messageType":@1,@"messageSize":@99999999999};
+    NSData* data =  [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    
+    send(socketFileDescriptor, [data bytes], data.length, 0);
+    NSLog(@"sendClick:%lu",data.length);
+    close(socketFileDescriptor);
 }
 //192.168.1.91
 //192.168.3.120
